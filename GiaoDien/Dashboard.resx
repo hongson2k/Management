@@ -3664,4 +3664,18 @@
         T0SYkozpM4pTw53sGUkLSFuPbWZAMgQijIln0cBBKNksfFWDtEG/ag5PggHY/wDpD//Z
 </value>
   </data>
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAFLSURBVGhD7ZZBasJAGIWz8gbuXAviLVy47426deXGWwi9QaF3qL1A90WwXRbS7zWv0EUtdUz9
+        M/h/8EFIZt68SMakSZIkSZI+adt2jmt8wlerY52be9jwoNwIN/iOx9A1jRl52jBQIbzHv6Kxw7kJyuhX
+        PZWNp8dCET3zvz02x9Cc+D1BCW3OUtaOiYMSu65LETvHxEGJQ9eliINj4lCJrksRg7iB6h+h6jdx3X+j
+        giL1vsgEZer+lBAqhHV+zH2HcnV+TifJNcPmHOMNrvAOH/EZv9Cxzumaxmjs2NNjoMAMb/GsbyFUxsyx
+        /w+LLfEB+0aZSy/TP4RP8JS3bSlaY+Jl+4HABb4o/UJorYWXPw+Cpvim1AujNaeuUQ4h28+4GLauUQ4h
+        +y4rhL1rlOOgMFyjHOeE4RrlOCcM1yjHOWG4RpIkSZL8QNN8AOs1ntnY0ArgAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

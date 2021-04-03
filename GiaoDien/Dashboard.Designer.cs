@@ -43,6 +43,7 @@
             this.topdashboard_text = new System.Windows.Forms.TextBox();
             this.pn_User = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panelstatistic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stasticpicture)).BeginInit();
             this.panel4.SuspendLayout();
@@ -213,9 +214,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(54, 23);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(47, 16);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(104, 51);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -265,5 +268,6 @@
         private System.Windows.Forms.TextBox topdashboard_text;
         private System.Windows.Forms.Panel pn_User;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
