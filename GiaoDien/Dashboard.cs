@@ -16,5 +16,10 @@ namespace GiaoDien
         {
             InitializeComponent();
         }
+
+        private void txt_User_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
