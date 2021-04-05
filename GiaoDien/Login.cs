@@ -24,7 +24,6 @@ namespace GiaoDien
         {
             Form_Alert frm = new Form_Alert();
             frm.showAlert(msg, type);
-
         }    
         private void button1_Click(object sender, EventArgs e)
         {

@@ -28,7 +28,7 @@ namespace GiaoDien
                 MenuVertical.Width = 70;
             else MenuVertical.Width = 180;
         }
-        private void AbrirFormEnPanel(object Formhijo)
+        public void AbrirFormEnPanel(object Formhijo)
         {
             if (this.MenuCenter.Controls.Count > 0)
                 this.MenuCenter.Controls.RemoveAt(0);
@@ -41,7 +41,10 @@ namespace GiaoDien
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new User());
+            this.Hide();
+            User usera = new User();
+            usera.ShowDialog();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)

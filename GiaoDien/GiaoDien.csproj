@@ -53,11 +53,35 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Add_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_User.Designer.cs">
+      <DependentUpon>Add_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drop_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drop_User.Designer.cs">
+      <DependentUpon>Drop_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_User.Designer.cs">
+      <DependentUpon>Edit_User.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Alert.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Alert.Designer.cs">
       <DependentUpon>Form_Alert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grant_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grant_User.Designer.cs">
+      <DependentUpon>Grant_User.cs</DependentUpon>
     </Compile>
     <Compile Include="Role.cs">
       <SubType>Form</SubType>
@@ -77,25 +101,37 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="phanhe1.cs">
+    <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="phanhe1.Designer.cs">
-      <DependentUpon>phanhe1.cs</DependentUpon>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Add_User.resx">
+      <DependentUpon>Add_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drop_User.resx">
+      <DependentUpon>Drop_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_User.resx">
+      <DependentUpon>Edit_User.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Alert.resx">
       <DependentUpon>Form_Alert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grant_User.resx">
+      <DependentUpon>Grant_User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="phanhe1.resx">
-      <DependentUpon>phanhe1.cs</DependentUpon>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
