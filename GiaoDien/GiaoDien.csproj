@@ -77,6 +77,12 @@
     <Compile Include="Form_Alert.Designer.cs">
       <DependentUpon>Form_Alert.cs</DependentUpon>
     </Compile>
+    <Compile Include="Grant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grant.Designer.cs">
+      <DependentUpon>Grant.cs</DependentUpon>
+    </Compile>
     <Compile Include="Grant_User.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Alert.resx">
       <DependentUpon>Form_Alert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grant.resx">
+      <DependentUpon>Grant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Grant_User.resx">
       <DependentUpon>Grant_User.cs</DependentUpon>
