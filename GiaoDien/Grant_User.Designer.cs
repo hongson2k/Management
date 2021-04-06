@@ -197,6 +197,7 @@
             this.btnGrant.Text = "Grant Roles";
             this.btnGrant.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGrant.UseVisualStyleBackColor = false;
+            this.btnGrant.Click += new System.EventHandler(this.btnGrant_Click);
             // 
             // Grant_User
             // 

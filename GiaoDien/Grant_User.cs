@@ -66,5 +66,13 @@ namespace GiaoDien
             usera.ShowDialog();
             this.Close();
         }
+
+        private void btnGrant_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Grant grant = new Grant();
+            grant.ShowDialog();
+            this.Close();
+        }
     }
 }
