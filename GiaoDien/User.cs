@@ -28,7 +28,7 @@ namespace GiaoDien
             using (OracleConnection orcCont = new OracleConnection(connectionString))
             {
                 orcCont.Open();
-                OracleDataAdapter orcData = new OracleDataAdapter("select * from all_users ", orcCont);
+                OracleDataAdapter orcData = new OracleDataAdapter("select * from all_users order by created desc ", orcCont);
                 DataTable dtbl = new DataTable();
                 orcData.Fill(dtbl);
                 dgv1.DataSource = dtbl;
@@ -40,7 +40,7 @@ namespace GiaoDien
             using (OracleConnection orcCont = new OracleConnection(connectionString))
             {
                 orcCont.Open();
-                OracleDataAdapter orcData = new OracleDataAdapter("select * from all_users ", orcCont);
+                OracleDataAdapter orcData = new OracleDataAdapter("select * from all_users order by created desc ", orcCont);
                 DataTable dtbl = new DataTable();
                 orcData.Fill(dtbl);
                 dgv1.DataSource = dtbl;

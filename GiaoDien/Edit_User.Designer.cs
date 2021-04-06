@@ -48,6 +48,8 @@
             this.txtEdit_username = new System.Windows.Forms.TextBox();
             this.lb_username_add = new System.Windows.Forms.Label();
             this.btnReturn_InDrop = new System.Windows.Forms.Button();
+            this.btnEditCancel = new System.Windows.Forms.Button();
+            this.btnEdit_Save = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -109,6 +111,7 @@
             this.dgv_in_EditUser.RowTemplate.Height = 24;
             this.dgv_in_EditUser.Size = new System.Drawing.Size(623, 430);
             this.dgv_in_EditUser.TabIndex = 24;
+            this.dgv_in_EditUser.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_in_EditUser_CellDoubleClick);
             // 
             // pn_edit_user
             // 
@@ -258,12 +261,49 @@
             this.btnReturn_InDrop.UseVisualStyleBackColor = false;
             this.btnReturn_InDrop.Click += new System.EventHandler(this.btnReturn_InDrop_Click);
             // 
+            // btnEditCancel
+            // 
+            this.btnEditCancel.BackColor = System.Drawing.Color.Navy;
+            this.btnEditCancel.FlatAppearance.BorderSize = 0;
+            this.btnEditCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditCancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditCancel.ForeColor = System.Drawing.Color.White;
+            this.btnEditCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnEditCancel.Image")));
+            this.btnEditCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditCancel.Location = new System.Drawing.Point(206, 441);
+            this.btnEditCancel.Name = "btnEditCancel";
+            this.btnEditCancel.Size = new System.Drawing.Size(126, 59);
+            this.btnEditCancel.TabIndex = 29;
+            this.btnEditCancel.Text = "Cancel";
+            this.btnEditCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditCancel.UseVisualStyleBackColor = false;
+            // 
+            // btnEdit_Save
+            // 
+            this.btnEdit_Save.BackColor = System.Drawing.Color.Brown;
+            this.btnEdit_Save.FlatAppearance.BorderSize = 0;
+            this.btnEdit_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit_Save.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit_Save.ForeColor = System.Drawing.Color.White;
+            this.btnEdit_Save.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit_Save.Image")));
+            this.btnEdit_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit_Save.Location = new System.Drawing.Point(35, 441);
+            this.btnEdit_Save.Name = "btnEdit_Save";
+            this.btnEdit_Save.Size = new System.Drawing.Size(116, 59);
+            this.btnEdit_Save.TabIndex = 28;
+            this.btnEdit_Save.Text = "Save";
+            this.btnEdit_Save.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEdit_Save.UseVisualStyleBackColor = false;
+            this.btnEdit_Save.Click += new System.EventHandler(this.btnEdit_Save_Click);
+            // 
             // Edit_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1087, 549);
+            this.Controls.Add(this.btnEditCancel);
+            this.Controls.Add(this.btnEdit_Save);
             this.Controls.Add(this.btnReturn_InDrop);
             this.Controls.Add(this.pn_edit_user);
             this.Controls.Add(this.panel1);
@@ -304,5 +344,7 @@
         private System.Windows.Forms.TextBox txtEdit_username;
         private System.Windows.Forms.Label lb_username_add;
         private System.Windows.Forms.Button btnReturn_InDrop;
+        private System.Windows.Forms.Button btnEditCancel;
+        private System.Windows.Forms.Button btnEdit_Save;
     }
 }
