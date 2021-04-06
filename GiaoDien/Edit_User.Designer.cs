@@ -59,7 +59,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
             this.panel1.Controls.Add(this.list_user_txt1);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -70,7 +70,7 @@
             // 
             // list_user_txt1
             // 
-            this.list_user_txt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.list_user_txt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
             this.list_user_txt1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.list_user_txt1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.list_user_txt1.ForeColor = System.Drawing.Color.White;
@@ -247,7 +247,7 @@
             // 
             // btnReturn_InDrop
             // 
-            this.btnReturn_InDrop.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnReturn_InDrop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
             this.btnReturn_InDrop.FlatAppearance.BorderSize = 0;
             this.btnReturn_InDrop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReturn_InDrop.Image = ((System.Drawing.Image)(resources.GetObject("btnReturn_InDrop.Image")));
@@ -269,7 +269,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgv_in_EditUser);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Edit_User";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit_User";

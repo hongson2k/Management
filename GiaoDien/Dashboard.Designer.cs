@@ -32,10 +32,8 @@
             this.topdashboard_text = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pn_User = new System.Windows.Forms.Panel();
-            this.txt_User = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -46,6 +44,11 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.pn_User.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -67,41 +70,27 @@
             this.topdashboard_text.ForeColor = System.Drawing.SystemColors.Window;
             this.topdashboard_text.Location = new System.Drawing.Point(0, 0);
             this.topdashboard_text.Name = "topdashboard_text";
-            this.topdashboard_text.Size = new System.Drawing.Size(1268, 49);
+            this.topdashboard_text.Size = new System.Drawing.Size(1061, 49);
             this.topdashboard_text.TabIndex = 9;
             this.topdashboard_text.Text = "Dashboard";
-            this.topdashboard_text.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pn_User
             // 
             this.pn_User.BackColor = System.Drawing.Color.DodgerBlue;
-            this.pn_User.Controls.Add(this.txt_User);
+            this.pn_User.Controls.Add(this.label2);
+            this.pn_User.Controls.Add(this.label1);
             this.pn_User.Controls.Add(this.pictureBox1);
             this.pn_User.Location = new System.Drawing.Point(99, 77);
             this.pn_User.Name = "pn_User";
-            this.pn_User.Size = new System.Drawing.Size(200, 100);
+            this.pn_User.Size = new System.Drawing.Size(258, 110);
             this.pn_User.TabIndex = 10;
-            // 
-            // txt_User
-            // 
-            this.txt_User.BackColor = System.Drawing.Color.DodgerBlue;
-            this.txt_User.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_User.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_User.ForeColor = System.Drawing.SystemColors.Window;
-            this.txt_User.Location = new System.Drawing.Point(69, 71);
-            this.txt_User.Name = "txt_User";
-            this.txt_User.Size = new System.Drawing.Size(61, 25);
-            this.txt_User.TabIndex = 11;
-            this.txt_User.Text = "Users";
-            this.txt_User.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_User.TextChanged += new System.EventHandler(this.txt_User_TextChanged);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(54, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(151, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(96, 62);
+            this.pictureBox1.Size = new System.Drawing.Size(107, 110);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -109,32 +98,20 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LimeGreen;
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Location = new System.Drawing.Point(432, 77);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.Size = new System.Drawing.Size(262, 110);
             this.panel1.TabIndex = 12;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.LimeGreen;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(69, 71);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(61, 25);
-            this.textBox1.TabIndex = 11;
-            this.textBox1.Text = "Roles";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(52, 6);
+            this.pictureBox2.Location = new System.Drawing.Point(163, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(96, 62);
+            this.pictureBox2.Size = new System.Drawing.Size(99, 110);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -179,7 +156,7 @@
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Location = new System.Drawing.Point(99, 255);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 100);
+            this.panel3.Size = new System.Drawing.Size(258, 128);
             this.panel3.TabIndex = 13;
             // 
             // textBox3
@@ -239,13 +216,73 @@
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
             // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.LimeGreen;
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox6.Location = new System.Drawing.Point(37, 47);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(89, 41);
+            this.textBox6.TabIndex = 13;
+            this.textBox6.Text = "10";
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(23, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 40);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Users";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(38, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 40);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "168";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(749, 8);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(265, 40);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Welcome: DBA";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(30, 6);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(104, 40);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Roles";
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1268, 628);
+            this.ClientSize = new System.Drawing.Size(1061, 628);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -279,10 +316,8 @@
         private System.Windows.Forms.TextBox topdashboard_text;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel pn_User;
-        private System.Windows.Forms.TextBox txt_User;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBox2;
@@ -293,5 +328,10 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label4;
     }
 }

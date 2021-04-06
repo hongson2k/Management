@@ -94,7 +94,17 @@ namespace GiaoDien
 
         private void dashboard_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new Dashboard());
+           
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

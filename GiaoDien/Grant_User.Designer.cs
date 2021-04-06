@@ -49,7 +49,7 @@
             // 
             // btnReturn_InGrant
             // 
-            this.btnReturn_InGrant.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnReturn_InGrant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
             this.btnReturn_InGrant.FlatAppearance.BorderSize = 0;
             this.btnReturn_InGrant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReturn_InGrant.Image = ((System.Drawing.Image)(resources.GetObject("btnReturn_InGrant.Image")));
@@ -64,7 +64,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
             this.panel1.Controls.Add(this.list_user_txt1);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -75,7 +75,7 @@
             // 
             // list_user_txt1
             // 
-            this.list_user_txt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.list_user_txt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
             this.list_user_txt1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.list_user_txt1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.list_user_txt1.ForeColor = System.Drawing.Color.White;

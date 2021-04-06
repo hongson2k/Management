@@ -40,6 +40,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReturn_InDrop = new System.Windows.Forms.Button();
+            this.btn_Refresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_in_DropUser)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -94,9 +95,9 @@
             this.btnCancelDrop.ForeColor = System.Drawing.Color.White;
             this.btnCancelDrop.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelDrop.Image")));
             this.btnCancelDrop.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelDrop.Location = new System.Drawing.Point(262, 218);
+            this.btnCancelDrop.Location = new System.Drawing.Point(144, 411);
             this.btnCancelDrop.Name = "btnCancelDrop";
-            this.btnCancelDrop.Size = new System.Drawing.Size(124, 48);
+            this.btnCancelDrop.Size = new System.Drawing.Size(136, 48);
             this.btnCancelDrop.TabIndex = 14;
             this.btnCancelDrop.Text = "Cancel";
             this.btnCancelDrop.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -112,19 +113,20 @@
             this.btnSaveDrop.ForeColor = System.Drawing.Color.White;
             this.btnSaveDrop.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveDrop.Image")));
             this.btnSaveDrop.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaveDrop.Location = new System.Drawing.Point(78, 218);
+            this.btnSaveDrop.Location = new System.Drawing.Point(144, 206);
             this.btnSaveDrop.Name = "btnSaveDrop";
-            this.btnSaveDrop.Size = new System.Drawing.Size(116, 48);
+            this.btnSaveDrop.Size = new System.Drawing.Size(136, 48);
             this.btnSaveDrop.TabIndex = 13;
             this.btnSaveDrop.Text = "Drop";
             this.btnSaveDrop.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSaveDrop.UseVisualStyleBackColor = false;
+            this.btnSaveDrop.Click += new System.EventHandler(this.btnSaveDrop_Click);
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
             this.panel1.Controls.Add(this.list_user_txt1);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -135,7 +137,7 @@
             // 
             // list_user_txt1
             // 
-            this.list_user_txt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.list_user_txt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
             this.list_user_txt1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.list_user_txt1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.list_user_txt1.ForeColor = System.Drawing.Color.White;
@@ -167,7 +169,7 @@
             // 
             // btnReturn_InDrop
             // 
-            this.btnReturn_InDrop.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnReturn_InDrop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
             this.btnReturn_InDrop.FlatAppearance.BorderSize = 0;
             this.btnReturn_InDrop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReturn_InDrop.Image = ((System.Drawing.Image)(resources.GetObject("btnReturn_InDrop.Image")));
@@ -178,12 +180,31 @@
             this.btnReturn_InDrop.UseVisualStyleBackColor = false;
             this.btnReturn_InDrop.Click += new System.EventHandler(this.btnReturn_InDrop_Click);
             // 
+            // btn_Refresh
+            // 
+            this.btn_Refresh.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btn_Refresh.FlatAppearance.BorderSize = 0;
+            this.btn_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Refresh.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Refresh.ForeColor = System.Drawing.Color.White;
+            this.btn_Refresh.Image = ((System.Drawing.Image)(resources.GetObject("btn_Refresh.Image")));
+            this.btn_Refresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Refresh.Location = new System.Drawing.Point(144, 307);
+            this.btn_Refresh.Name = "btn_Refresh";
+            this.btn_Refresh.Size = new System.Drawing.Size(136, 48);
+            this.btn_Refresh.TabIndex = 17;
+            this.btn_Refresh.Text = "Refresh";
+            this.btn_Refresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Refresh.UseVisualStyleBackColor = false;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
+            // 
             // Drop_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1089, 523);
+            this.Controls.Add(this.btn_Refresh);
             this.Controls.Add(this.btnReturn_InDrop);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCancelDrop);
@@ -221,5 +242,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnReturn_InDrop;
+        private System.Windows.Forms.Button btn_Refresh;
     }
 }

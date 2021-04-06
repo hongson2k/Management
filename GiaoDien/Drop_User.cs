@@ -21,6 +21,11 @@ namespace GiaoDien
             InitializeComponent();
             displayData();
         }
+        public void Alert_DropUser(string msg, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(msg, type);
+        }
         public void displayData()
         {
             using (OracleConnection orcCont = new OracleConnection(connectionString))
@@ -60,6 +65,53 @@ namespace GiaoDien
             User usera = new User();
             usera.ShowDialog();
             this.Close();
+        }
+
+        private void btnSaveDrop_Click(object sender, EventArgs e)
+        {
+            string username = txt_drop_nameuser.Text;
+            if (username == "")
+            {
+                this.Alert_DropUser("Please input the username", Form_Alert.enmType.Failed);
+                return;
+            }
+            else
+            {
+                using (OracleConnection connect = new OracleConnection(connectionString))
+                {
+                    connect.Open();
+                    string queryNeed = "alter session set\"_ORACLE_SCRIPT\"=true";
+                    OracleCommand cmd = new OracleCommand(queryNeed, connect);
+                    cmd.ExecuteNonQuery();
+                    string queryMain = "Drop USER " + username;
+                    OracleCommand cmdMain = new OracleCommand(queryMain, connect);
+                    try
+                    {
+                        cmdMain.ExecuteNonQuery();
+                        connect.Close();
+                        this.Alert_DropUser("The User has been DROPPED\n successfully", Form_Alert.enmType.Success);
+                    }
+                    catch
+                    {
+                        this.Alert_DropUser("User does not exist in the system.", Form_Alert.enmType.Failed);
+                    }
+
+
+                }
+            }
+        }
+
+        private void btn_Refresh_Click(object sender, EventArgs e)
+        {
+            using (OracleConnection orcCont = new OracleConnection(connectionString))
+            {
+                orcCont.Open();
+                OracleDataAdapter orcData = new OracleDataAdapter("select * from all_users ", orcCont);
+                DataTable dtbl = new DataTable();
+                orcData.Fill(dtbl);
+                dgv_in_DropUser.DataSource = dtbl;
+                orcCont.Close();
+            }
         }
     }
 }

@@ -68,7 +68,7 @@ namespace GiaoDien
                         }
                         catch
                         {
-                            this.Alert_CreateUser("The Username already exists\n successfully", Form_Alert.enmType.Failed);
+                            this.Alert_CreateUser("The Username already exists\n in the system", Form_Alert.enmType.Failed);
                         }
 
                         
