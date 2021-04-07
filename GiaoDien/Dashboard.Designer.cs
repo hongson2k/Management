@@ -32,8 +32,12 @@
             this.topdashboard_text = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pn_User = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -44,11 +48,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.add_user_btn = new System.Windows.Forms.Button();
             this.pn_User.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -85,6 +86,28 @@
             this.pn_User.Size = new System.Drawing.Size(258, 110);
             this.pn_User.TabIndex = 10;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(38, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 39);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "168";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(23, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 39);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Users";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -105,6 +128,30 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(262, 110);
             this.panel1.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(30, 6);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(101, 39);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Roles";
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.LimeGreen;
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox6.Location = new System.Drawing.Point(37, 47);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(89, 41);
+            this.textBox6.TabIndex = 13;
+            this.textBox6.Text = "10";
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox2
             // 
@@ -216,41 +263,6 @@
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
             // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.LimeGreen;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox6.Location = new System.Drawing.Point(37, 47);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(89, 41);
-            this.textBox6.TabIndex = 13;
-            this.textBox6.Text = "10";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(23, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 40);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Users";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(38, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 40);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "168";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -259,21 +271,26 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(749, 8);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(265, 40);
+            this.label3.Size = new System.Drawing.Size(254, 39);
             this.label3.TabIndex = 17;
             this.label3.Text = "Welcome: DBA";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label4
+            // add_user_btn
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(30, 6);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 40);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Roles";
+            this.add_user_btn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.add_user_btn.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_user_btn.ForeColor = System.Drawing.Color.White;
+            this.add_user_btn.Image = ((System.Drawing.Image)(resources.GetObject("add_user_btn.Image")));
+            this.add_user_btn.Location = new System.Drawing.Point(756, 284);
+            this.add_user_btn.Name = "add_user_btn";
+            this.add_user_btn.Size = new System.Drawing.Size(211, 110);
+            this.add_user_btn.TabIndex = 18;
+            this.add_user_btn.Text = "Add User";
+            this.add_user_btn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.add_user_btn.UseVisualStyleBackColor = false;
+            this.add_user_btn.Click += new System.EventHandler(this.add_user_btn_Click);
+            this.add_user_btn.MouseEnter += new System.EventHandler(this.add_user_btn_MouseEnter);
             // 
             // Dashboard
             // 
@@ -282,6 +299,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1061, 628);
+            this.Controls.Add(this.add_user_btn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -333,5 +351,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button add_user_btn;
     }
 }

@@ -106,5 +106,10 @@ namespace GiaoDien
         {
 
         }
+
+        private void add_user_btn_Click(object sender, EventArgs e)
+        {
+            this.BackColor = ColorTranslator.FromHtml("e9c46a");
+        }
     }
 }
