@@ -49,7 +49,10 @@ namespace GiaoDien
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new Role());
+            this.Hide();
+            Role rolea = new Role();
+            rolea.ShowDialog();
+            this.Close();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
