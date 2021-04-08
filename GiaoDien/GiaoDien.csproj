@@ -53,12 +53,6 @@
     <Compile Include="Add_Role.Designer.cs">
       <DependentUpon>Add_Role.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dashboard.Designer.cs">
-      <DependentUpon>Dashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="Add_User.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,9 +123,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Add_Role.resx">
       <DependentUpon>Add_Role.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dashboard.resx">
-      <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Add_User.resx">
       <DependentUpon>Add_User.cs</DependentUpon>

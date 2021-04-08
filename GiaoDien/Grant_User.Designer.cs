@@ -183,7 +183,7 @@
             // 
             // btnGrant
             // 
-            this.btnGrant.BackColor = System.Drawing.Color.Coral;
+            this.btnGrant.BackColor = System.Drawing.Color.DarkCyan;
             this.btnGrant.FlatAppearance.BorderSize = 0;
             this.btnGrant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrant.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
