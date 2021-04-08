@@ -114,5 +114,13 @@ namespace GiaoDien
         {
             this.BackColor = ColorTranslator.FromHtml("e9c46a");
         }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login logout = new Login();
+            logout.ShowDialog();
+            this.Close();
+        }
     }
 }

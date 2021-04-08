@@ -28,7 +28,7 @@ namespace GiaoDien
         private void button1_Click(object sender, EventArgs e)
         {
             int temp = 0;
-            if(txtUsername.Text=="admin" && txtPassword.Text=="admin")
+            if(txtUsname.Text=="admin" && txtPsw.Text=="admin")
             {
                 this.Hide();
                 PhanHe1 phanhe1 = new PhanHe1();
@@ -44,6 +44,16 @@ namespace GiaoDien
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

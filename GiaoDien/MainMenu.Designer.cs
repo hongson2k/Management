@@ -75,6 +75,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btn_logout = new System.Windows.Forms.Button();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -100,11 +102,14 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.MenuVertical.Controls.Add(this.pictureBox11);
+            this.MenuVertical.Controls.Add(this.btn_logout);
             this.MenuVertical.Controls.Add(this.pictureBox1);
             this.MenuVertical.Controls.Add(this.dashboard);
             this.MenuVertical.Controls.Add(this.pictureBox3);
@@ -643,6 +648,33 @@
             this.textBox1.Size = new System.Drawing.Size(305, 32);
             this.textBox1.TabIndex = 0;
             // 
+            // btn_logout
+            // 
+            this.btn_logout.FlatAppearance.BorderSize = 0;
+            this.btn_logout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_logout.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_logout.ForeColor = System.Drawing.Color.White;
+            this.btn_logout.Location = new System.Drawing.Point(56, 332);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(184, 46);
+            this.btn_logout.TabIndex = 6;
+            this.btn_logout.Text = "Logout";
+            this.btn_logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_logout.UseVisualStyleBackColor = true;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(12, 337);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(45, 41);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 7;
+            this.pictureBox11.TabStop = false;
+            // 
             // PhanHe1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -689,6 +721,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -741,5 +774,7 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.Button btn_logout;
     }
 }
