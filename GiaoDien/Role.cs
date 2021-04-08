@@ -17,18 +17,43 @@ namespace GiaoDien
         public Role()
         {
             InitializeComponent();
+            displayData();
         }
         public void displayData()
         {
             using (OracleConnection orcCont = new OracleConnection(connectionString))
             {
                 orcCont.Open();
-                OracleDataAdapter orcData = new OracleDataAdapter("select * from all_users order by created desc ", orcCont);
+                OracleDataAdapter orcData = new OracleDataAdapter("SELECT * FROM DBA_ROLES ORDER BY role ASC", orcCont);
                 DataTable dtbl = new DataTable();
                 orcData.Fill(dtbl);
                 dgv_in_Role.DataSource = dtbl;
                 orcCont.Close();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PhanHe1 p = new PhanHe1();
+            p.ShowDialog();
+            this.Close();
+        }
+
+        private void add_role_btn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Add_Role addR = new Add_Role();
+            addR.ShowDialog();
+            this.Close();
+        }
+
+        private void btn_Drop_Role_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Drop_Role dropR = new Drop_Role();
+            dropR.ShowDialog();
+            this.Close();
         }
     }
 }

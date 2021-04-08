@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add_Role.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Role.Designer.cs">
+      <DependentUpon>Add_Role.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +64,12 @@
     </Compile>
     <Compile Include="Add_User.Designer.cs">
       <DependentUpon>Add_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drop_Role.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drop_Role.Designer.cs">
+      <DependentUpon>Drop_Role.cs</DependentUpon>
     </Compile>
     <Compile Include="Drop_User.cs">
       <SubType>Form</SubType>
@@ -115,11 +127,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Add_Role.resx">
+      <DependentUpon>Add_Role.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Add_User.resx">
       <DependentUpon>Add_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drop_Role.resx">
+      <DependentUpon>Drop_Role.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Drop_User.resx">
       <DependentUpon>Drop_User.cs</DependentUpon>

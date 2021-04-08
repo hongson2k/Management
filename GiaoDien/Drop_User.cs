@@ -90,6 +90,7 @@ namespace GiaoDien
                         cmdMain.ExecuteNonQuery();
                         connect.Close();
                         this.Alert_DropUser("The User has been DROPPED\n successfully", Form_Alert.enmType.Success);
+                        displayData(); 
                     }
                     catch
                     {
@@ -125,6 +126,45 @@ namespace GiaoDien
             User usera = new User();
             usera.ShowDialog();
             this.Close();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string username = txt_drop_nameuser.Text;
+            if (username == "")
+            {
+                this.Alert_DropUser("Please input the username", Form_Alert.enmType.Failed);
+                return;
+            }
+            else
+            {
+                using (OracleConnection connect = new OracleConnection(connectionString))
+                {
+                    connect.Open();
+                    string queryNeed = "alter session set\"_ORACLE_SCRIPT\"=true";
+                    OracleCommand cmd = new OracleCommand(queryNeed, connect);
+                    cmd.ExecuteNonQuery();
+                    string queryMain = "Drop USER " + username;
+                    OracleCommand cmdMain = new OracleCommand(queryMain, connect);
+                    try
+                    {
+                        cmdMain.ExecuteNonQuery();
+                        connect.Close();
+                        this.Alert_DropUser("The User has been DROPPED\n successfully", Form_Alert.enmType.Success);
+                    }
+                    catch
+                    {
+                        this.Alert_DropUser("User does not exist in the system.", Form_Alert.enmType.Failed);
+                    }
+
+
+                }
+            }
+        }
+
+        private void dgv_in_DropUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
