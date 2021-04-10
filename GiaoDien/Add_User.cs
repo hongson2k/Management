@@ -115,5 +115,10 @@ namespace GiaoDien
             usera.ShowDialog();
             this.Close();
         }
+
+        private void defaultTablespace_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

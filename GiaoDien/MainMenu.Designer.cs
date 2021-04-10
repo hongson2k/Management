@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhanHe1));
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.btn_logout = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dashboard = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -44,7 +46,6 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.btn_Drop = new System.Windows.Forms.Button();
             this.add_user_btn = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.list_user_txt1 = new System.Windows.Forms.TextBox();
@@ -75,9 +76,9 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btn_logout = new System.Windows.Forms.Button();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.add_role_btn = new System.Windows.Forms.Button();
             this.MenuVertical.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -102,7 +103,6 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuVertical
@@ -122,6 +122,35 @@
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Size = new System.Drawing.Size(243, 804);
             this.MenuVertical.TabIndex = 0;
+            this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint);
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(12, 337);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(45, 41);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 7;
+            this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
+            // 
+            // btn_logout
+            // 
+            this.btn_logout.FlatAppearance.BorderSize = 0;
+            this.btn_logout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_logout.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_logout.ForeColor = System.Drawing.Color.White;
+            this.btn_logout.Location = new System.Drawing.Point(56, 332);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(184, 46);
+            this.btn_logout.TabIndex = 6;
+            this.btn_logout.Text = "Logout";
+            this.btn_logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_logout.UseVisualStyleBackColor = true;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // pictureBox1
             // 
@@ -133,6 +162,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_2);
             // 
             // dashboard
             // 
@@ -160,6 +190,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox4
             // 
@@ -171,6 +202,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // panel1
             // 
@@ -180,6 +212,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(243, 174);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox5
             // 
@@ -191,6 +224,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click_1);
             // 
             // button2
             // 
@@ -233,6 +267,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1228, 80);
             this.panel2.TabIndex = 0;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // topdashboard_text
             // 
@@ -246,13 +281,14 @@
             this.topdashboard_text.TabIndex = 0;
             this.topdashboard_text.Text = "Hospital Centre Management";
             this.topdashboard_text.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.topdashboard_text.TextChanged += new System.EventHandler(this.topdashboard_text_TextChanged);
             // 
             // MenuCenter
             // 
             this.MenuCenter.BackColor = System.Drawing.Color.White;
             this.MenuCenter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MenuCenter.Controls.Add(this.add_role_btn);
             this.MenuCenter.Controls.Add(this.panel10);
-            this.MenuCenter.Controls.Add(this.btn_Drop);
             this.MenuCenter.Controls.Add(this.add_user_btn);
             this.MenuCenter.Controls.Add(this.panel9);
             this.MenuCenter.Controls.Add(this.panel5);
@@ -278,6 +314,7 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(1228, 40);
             this.panel10.TabIndex = 27;
+            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
             // 
             // textBox2
             // 
@@ -290,6 +327,7 @@
             this.textBox2.Size = new System.Drawing.Size(197, 29);
             this.textBox2.TabIndex = 10;
             this.textBox2.Text = "General Statistic";
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // pictureBox14
             // 
@@ -300,20 +338,7 @@
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox14.TabIndex = 8;
             this.pictureBox14.TabStop = false;
-            // 
-            // btn_Drop
-            // 
-            this.btn_Drop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
-            this.btn_Drop.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Drop.ForeColor = System.Drawing.Color.White;
-            this.btn_Drop.Image = ((System.Drawing.Image)(resources.GetObject("btn_Drop.Image")));
-            this.btn_Drop.Location = new System.Drawing.Point(434, 615);
-            this.btn_Drop.Name = "btn_Drop";
-            this.btn_Drop.Size = new System.Drawing.Size(216, 108);
-            this.btn_Drop.TabIndex = 28;
-            this.btn_Drop.Text = "Drop User";
-            this.btn_Drop.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_Drop.UseVisualStyleBackColor = false;
+            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
             // 
             // add_user_btn
             // 
@@ -321,7 +346,7 @@
             this.add_user_btn.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add_user_btn.ForeColor = System.Drawing.Color.White;
             this.add_user_btn.Image = ((System.Drawing.Image)(resources.GetObject("add_user_btn.Image")));
-            this.add_user_btn.Location = new System.Drawing.Point(120, 613);
+            this.add_user_btn.Location = new System.Drawing.Point(228, 613);
             this.add_user_btn.Name = "add_user_btn";
             this.add_user_btn.Size = new System.Drawing.Size(211, 110);
             this.add_user_btn.TabIndex = 27;
@@ -352,6 +377,7 @@
             this.list_user_txt1.Size = new System.Drawing.Size(156, 29);
             this.list_user_txt1.TabIndex = 10;
             this.list_user_txt1.Text = "Core Activity";
+            this.list_user_txt1.TextChanged += new System.EventHandler(this.list_user_txt1_TextChanged);
             // 
             // pictureBox12
             // 
@@ -362,6 +388,7 @@
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox12.TabIndex = 8;
             this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
             // 
             // panel5
             // 
@@ -372,6 +399,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(262, 115);
             this.panel5.TabIndex = 19;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // label11
             // 
@@ -384,6 +412,7 @@
             this.label11.Size = new System.Drawing.Size(154, 39);
             this.label11.TabIndex = 22;
             this.label11.Text = "Account";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // pictureBox2
             // 
@@ -395,6 +424,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // panel6
             // 
@@ -406,6 +436,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(258, 115);
             this.panel6.TabIndex = 18;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // label10
             // 
@@ -417,6 +448,7 @@
             this.label10.Size = new System.Drawing.Size(53, 39);
             this.label10.TabIndex = 21;
             this.label10.Text = "34";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label7
             // 
@@ -428,6 +460,7 @@
             this.label7.Size = new System.Drawing.Size(121, 39);
             this.label7.TabIndex = 17;
             this.label7.Text = "Report";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // pictureBox6
             // 
@@ -439,6 +472,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // panel7
             // 
@@ -450,6 +484,7 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(254, 110);
             this.panel7.TabIndex = 16;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // label9
             // 
@@ -462,6 +497,7 @@
             this.label9.Size = new System.Drawing.Size(71, 39);
             this.label9.TabIndex = 20;
             this.label9.Text = "160";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label6
             // 
@@ -474,6 +510,7 @@
             this.label6.Size = new System.Drawing.Size(137, 39);
             this.label6.TabIndex = 18;
             this.label6.Text = "Onlines";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // pictureBox7
             // 
@@ -485,6 +522,7 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 0;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // panel8
             // 
@@ -496,6 +534,7 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(262, 110);
             this.panel8.TabIndex = 17;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // label8
             // 
@@ -507,6 +546,7 @@
             this.label8.Size = new System.Drawing.Size(53, 39);
             this.label8.TabIndex = 17;
             this.label8.Text = "10";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label4
             // 
@@ -518,6 +558,7 @@
             this.label4.Size = new System.Drawing.Size(101, 39);
             this.label4.TabIndex = 17;
             this.label4.Text = "Roles";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // pictureBox8
             // 
@@ -529,6 +570,7 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 0;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // pn_User
             // 
@@ -540,6 +582,7 @@
             this.pn_User.Name = "pn_User";
             this.pn_User.Size = new System.Drawing.Size(258, 110);
             this.pn_User.TabIndex = 15;
+            this.pn_User.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_User_Paint);
             // 
             // label2
             // 
@@ -551,6 +594,7 @@
             this.label2.Size = new System.Drawing.Size(71, 39);
             this.label2.TabIndex = 16;
             this.label2.Text = "168";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -562,6 +606,7 @@
             this.label1.Size = new System.Drawing.Size(100, 39);
             this.label1.TabIndex = 15;
             this.label1.Text = "Users";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox9
             // 
@@ -573,6 +618,7 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 0;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // panel3
             // 
@@ -585,6 +631,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1228, 56);
             this.panel3.TabIndex = 1;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // pictureBox10
             // 
@@ -596,6 +643,7 @@
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 17;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
             // label5
             // 
@@ -607,6 +655,7 @@
             this.label5.Size = new System.Drawing.Size(72, 34);
             this.label5.TabIndex = 18;
             this.label5.Text = "DBA";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label3
             // 
@@ -618,6 +667,7 @@
             this.label3.Size = new System.Drawing.Size(153, 34);
             this.label3.TabIndex = 17;
             this.label3.Text = "Welcome:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel4
             // 
@@ -627,6 +677,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(379, 50);
             this.panel4.TabIndex = 1;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint_1);
             // 
             // button1
             // 
@@ -647,33 +698,22 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(305, 32);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // btn_logout
+            // add_role_btn
             // 
-            this.btn_logout.FlatAppearance.BorderSize = 0;
-            this.btn_logout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_logout.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_logout.ForeColor = System.Drawing.Color.White;
-            this.btn_logout.Location = new System.Drawing.Point(56, 332);
-            this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Size = new System.Drawing.Size(184, 46);
-            this.btn_logout.TabIndex = 6;
-            this.btn_logout.Text = "Logout";
-            this.btn_logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_logout.UseVisualStyleBackColor = true;
-            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(12, 337);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(45, 41);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 7;
-            this.pictureBox11.TabStop = false;
+            this.add_role_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
+            this.add_role_btn.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_role_btn.ForeColor = System.Drawing.Color.White;
+            this.add_role_btn.Image = ((System.Drawing.Image)(resources.GetObject("add_role_btn.Image")));
+            this.add_role_btn.Location = new System.Drawing.Point(673, 613);
+            this.add_role_btn.Name = "add_role_btn";
+            this.add_role_btn.Size = new System.Drawing.Size(212, 110);
+            this.add_role_btn.TabIndex = 11;
+            this.add_role_btn.Text = "Add Role";
+            this.add_role_btn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.add_role_btn.UseVisualStyleBackColor = false;
+            this.add_role_btn.Click += new System.EventHandler(this.add_role_btn_Click);
             // 
             // PhanHe1
             // 
@@ -687,6 +727,7 @@
             this.Text = "Hospital Centre";
             this.Load += new System.EventHandler(this.PhanHe1_Load);
             this.MenuVertical.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -721,7 +762,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -770,11 +810,11 @@
         private System.Windows.Forms.TextBox list_user_txt1;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Button add_user_btn;
-        private System.Windows.Forms.Button btn_Drop;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Button btn_logout;
+        private System.Windows.Forms.Button add_role_btn;
     }
 }

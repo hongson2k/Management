@@ -40,7 +40,7 @@ namespace GiaoDien
         private void btnReturn_InDrop_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Grant_User grant_User = new Grant_User();
+            View_Detail grant_User = new View_Detail();
             grant_User.ShowDialog();
             this.Close();
         }
@@ -56,6 +56,8 @@ namespace GiaoDien
             string username = txtEdit_username.Text;
             string password = txt_EditPsw.Text;
             string confirm = txtEditConPsw.Text;
+
+            
             if (username == "")
             {
                 this.Alert_EditUser("Please input the username", Form_Alert.enmType.Failed);

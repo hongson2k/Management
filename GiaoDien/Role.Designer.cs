@@ -49,6 +49,11 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btn_Refresh = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnVienDuoi = new System.Windows.Forms.Panel();
+            this.txtRolename = new System.Windows.Forms.TextBox();
+            this.lb_username_add = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -159,7 +164,7 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_in_Role.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgv_in_Role.Location = new System.Drawing.Point(93, 175);
+            this.dgv_in_Role.Location = new System.Drawing.Point(666, 190);
             this.dgv_in_Role.Name = "dgv_in_Role";
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.SeaShell;
@@ -180,8 +185,9 @@
             this.dgv_in_Role.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Black;
             this.dgv_in_Role.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dgv_in_Role.RowTemplate.Height = 24;
-            this.dgv_in_Role.Size = new System.Drawing.Size(1164, 372);
+            this.dgv_in_Role.Size = new System.Drawing.Size(332, 361);
             this.dgv_in_Role.TabIndex = 16;
+            this.dgv_in_Role.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_in_Role_CellDoubleClick);
             // 
             // add_role_btn
             // 
@@ -213,6 +219,7 @@
             this.button1.Text = "View Details";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_Drop_Role
             // 
@@ -221,7 +228,7 @@
             this.btn_Drop_Role.ForeColor = System.Drawing.Color.White;
             this.btn_Drop_Role.Image = ((System.Drawing.Image)(resources.GetObject("btn_Drop_Role.Image")));
             this.btn_Drop_Role.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Drop_Role.Location = new System.Drawing.Point(637, 0);
+            this.btn_Drop_Role.Location = new System.Drawing.Point(63, 355);
             this.btn_Drop_Role.Name = "btn_Drop_Role";
             this.btn_Drop_Role.Size = new System.Drawing.Size(216, 55);
             this.btn_Drop_Role.TabIndex = 15;
@@ -250,7 +257,6 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.add_role_btn);
             this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.btn_Drop_Role);
             this.panel3.Location = new System.Drawing.Point(0, 74);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1350, 55);
@@ -284,12 +290,73 @@
             this.textBox2.Size = new System.Drawing.Size(305, 32);
             this.textBox2.TabIndex = 0;
             // 
+            // btn_Refresh
+            // 
+            this.btn_Refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
+            this.btn_Refresh.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Refresh.ForeColor = System.Drawing.Color.White;
+            this.btn_Refresh.Image = ((System.Drawing.Image)(resources.GetObject("btn_Refresh.Image")));
+            this.btn_Refresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Refresh.Location = new System.Drawing.Point(421, 192);
+            this.btn_Refresh.Name = "btn_Refresh";
+            this.btn_Refresh.Size = new System.Drawing.Size(178, 113);
+            this.btn_Refresh.TabIndex = 21;
+            this.btn_Refresh.Text = "Refresh";
+            this.btn_Refresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Refresh.UseVisualStyleBackColor = false;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Crimson;
+            this.label1.Location = new System.Drawing.Point(255, 282);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(13, 17);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "*";
+            // 
+            // pnVienDuoi
+            // 
+            this.pnVienDuoi.BackColor = System.Drawing.SystemColors.WindowText;
+            this.pnVienDuoi.Location = new System.Drawing.Point(45, 302);
+            this.pnVienDuoi.Name = "pnVienDuoi";
+            this.pnVienDuoi.Size = new System.Drawing.Size(204, 3);
+            this.pnVienDuoi.TabIndex = 24;
+            // 
+            // txtRolename
+            // 
+            this.txtRolename.BackColor = System.Drawing.SystemColors.Window;
+            this.txtRolename.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRolename.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRolename.Location = new System.Drawing.Point(48, 280);
+            this.txtRolename.Name = "txtRolename";
+            this.txtRolename.Size = new System.Drawing.Size(193, 25);
+            this.txtRolename.TabIndex = 23;
+            // 
+            // lb_username_add
+            // 
+            this.lb_username_add.AutoSize = true;
+            this.lb_username_add.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_username_add.ForeColor = System.Drawing.Color.Crimson;
+            this.lb_username_add.Location = new System.Drawing.Point(46, 254);
+            this.lb_username_add.Name = "lb_username_add";
+            this.lb_username_add.Size = new System.Drawing.Size(116, 23);
+            this.lb_username_add.TabIndex = 22;
+            this.lb_username_add.Text = "Rolename:";
+            // 
             // Role
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1350, 617);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pnVienDuoi);
+            this.Controls.Add(this.txtRolename);
+            this.Controls.Add(this.btn_Drop_Role);
+            this.Controls.Add(this.lb_username_add);
+            this.Controls.Add(this.btn_Refresh);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgv_in_Role);
@@ -331,5 +398,10 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btn_Refresh;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pnVienDuoi;
+        private System.Windows.Forms.TextBox txtRolename;
+        private System.Windows.Forms.Label lb_username_add;
     }
 }

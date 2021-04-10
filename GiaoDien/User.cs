@@ -19,10 +19,14 @@ namespace GiaoDien
             InitializeComponent();
             displayData();
         }
+        public void Alert_DropUser(string msg, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(msg, type);
+        }
 
-
-        //Nut Show nhưng khỏi cần vì đã có hàm DisplayData rồi
-        private void buttom_in_User_Click(object sender, EventArgs e)
+            //Nut Show nhưng khỏi cần vì đã có hàm DisplayData rồi
+            private void buttom_in_User_Click(object sender, EventArgs e)
         {
             
             using (OracleConnection orcCont = new OracleConnection(connectionString))
@@ -31,7 +35,7 @@ namespace GiaoDien
                 OracleDataAdapter orcData = new OracleDataAdapter("select * from all_users order by created desc ", orcCont);
                 DataTable dtbl = new DataTable();
                 orcData.Fill(dtbl);
-                dgv1.DataSource = dtbl;
+                dgv_UserList.DataSource = dtbl;
             }
         }
         //Hàm displayData
@@ -40,10 +44,10 @@ namespace GiaoDien
             using (OracleConnection orcCont = new OracleConnection(connectionString))
             {
                 orcCont.Open();
-                OracleDataAdapter orcData = new OracleDataAdapter("select * from all_users order by created desc ", orcCont);
+                OracleDataAdapter orcData = new OracleDataAdapter("select USERNAME,CREATED from all_users order by created desc ", orcCont);
                 DataTable dtbl = new DataTable();
                 orcData.Fill(dtbl);
-                dgv1.DataSource = dtbl;
+                dgv_UserList.DataSource = dtbl;
                 orcCont.Close();
             }
         }
@@ -64,10 +68,10 @@ namespace GiaoDien
 
         private void add_user_btn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Add_User addU = new Add_User();
+
+            CreateUser addU = new CreateUser();
             addU.ShowDialog();
-            this.Close();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -78,25 +82,70 @@ namespace GiaoDien
             this.Close();
         }
 
+
         private void btn_Drop_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Drop_User DropU = new Drop_User();
-            DropU.ShowDialog();
-            this.Close();
+            string username = txtUsname.Text;
+            if (username == "")
+            {
+                this.Alert_DropUser("Please input the username", Form_Alert.enmType.Failed);
+                return;
+            }
+            else
+            {
+                DialogResult dr = MessageBox.Show("Are you sure you want to delete this user","Drop User", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (dr == DialogResult.Yes)
+                {
+                    using (OracleConnection connect = new OracleConnection(connectionString))
+                    {
+                        connect.Open();
+                        string queryNeed = "alter session set\"_ORACLE_SCRIPT\"=true";
+                        OracleCommand cmd = new OracleCommand(queryNeed, connect);
+                        cmd.ExecuteNonQuery();
+                        string queryMain = "Drop USER " + username;
+                        OracleCommand cmdMain = new OracleCommand(queryMain, connect);
+                        try
+                        {
+                            cmdMain.ExecuteNonQuery();
+                            connect.Close();
+                            this.Alert_DropUser("The User has been DROPPED\n successfully", Form_Alert.enmType.Success);
+                            displayData();
+                        }
+                        catch
+                        {
+                            this.Alert_DropUser("User does not exist in the system.", Form_Alert.enmType.Failed);
+                        }
+                    }
+                }
+                else return;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Grant_User GrantU = new Grant_User();
-            GrantU.ShowDialog();
+            View_Detail vdt = new View_Detail();
+            vdt.Message = txtUsname.Text;
+            vdt.ShowDialog();
             this.Close();
+
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgv1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string v = dgv_UserList.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtUsname.Text = v;
+        }
+
+        private void btn_Refresh_Click(object sender, EventArgs e)
+        {
+            displayData();
         }
     }
 }

@@ -45,6 +45,7 @@
             this.pn_add_user = new System.Windows.Forms.Panel();
             this.btnCancelRole = new System.Windows.Forms.Button();
             this.btnSaveRole = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.pn_add_user.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +55,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(180, 9);
+            this.label4.Location = new System.Drawing.Point(510, 3);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(203, 37);
             this.label4.TabIndex = 4;
@@ -84,7 +85,7 @@
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(568, 53);
+            this.panel3.Size = new System.Drawing.Size(1544, 53);
             this.panel3.TabIndex = 8;
             // 
             // label1
@@ -243,12 +244,20 @@
             this.btnSaveRole.UseVisualStyleBackColor = false;
             this.btnSaveRole.Click += new System.EventHandler(this.btnSaveRole_Click);
             // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(547, 71);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(947, 583);
+            this.panel4.TabIndex = 9;
+            // 
             // Add_Role
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(568, 613);
+            this.ClientSize = new System.Drawing.Size(1544, 666);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pn_add_user);
             this.Controls.Add(this.btnCancelRole);
@@ -282,5 +291,6 @@
         private System.Windows.Forms.Panel pn_add_user;
         private System.Windows.Forms.Button btnCancelRole;
         private System.Windows.Forms.Button btnSaveRole;
+        private System.Windows.Forms.Panel panel4;
     }
 }
