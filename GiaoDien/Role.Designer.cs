@@ -40,6 +40,7 @@
             this.list_user_txt1 = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_Refresh = new System.Windows.Forms.Button();
             this.dgv_in_Role = new System.Windows.Forms.DataGridView();
             this.add_role_btn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -47,10 +48,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.btn_Refresh = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.pnVienDuoi = new System.Windows.Forms.Panel();
             this.txtRolename = new System.Windows.Forms.TextBox();
             this.lb_username_add = new System.Windows.Forms.Label();
@@ -71,7 +70,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1350, 53);
+            this.panel2.Size = new System.Drawing.Size(1167, 53);
             this.panel2.TabIndex = 18;
             // 
             // txtRole
@@ -80,9 +79,9 @@
             this.txtRole.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRole.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRole.ForeColor = System.Drawing.Color.White;
-            this.txtRole.Location = new System.Drawing.Point(504, 0);
+            this.txtRole.Location = new System.Drawing.Point(391, 3);
             this.txtRole.Name = "txtRole";
-            this.txtRole.Size = new System.Drawing.Size(481, 50);
+            this.txtRole.Size = new System.Drawing.Size(484, 50);
             this.txtRole.TabIndex = 10;
             this.txtRole.Text = "ROLE MANAGEMENT";
             // 
@@ -107,20 +106,21 @@
             this.panel1.Controls.Add(this.list_user_txt1);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(0, 144);
+            this.panel1.Controls.Add(this.btn_Refresh);
+            this.panel1.Location = new System.Drawing.Point(502, 181);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1350, 40);
+            this.panel1.Size = new System.Drawing.Size(634, 52);
             this.panel1.TabIndex = 17;
             // 
             // list_user_txt1
             // 
             this.list_user_txt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
             this.list_user_txt1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.list_user_txt1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.list_user_txt1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.list_user_txt1.ForeColor = System.Drawing.Color.White;
-            this.list_user_txt1.Location = new System.Drawing.Point(93, 8);
+            this.list_user_txt1.Location = new System.Drawing.Point(104, 3);
             this.list_user_txt1.Name = "list_user_txt1";
-            this.list_user_txt1.Size = new System.Drawing.Size(121, 29);
+            this.list_user_txt1.Size = new System.Drawing.Size(161, 37);
             this.list_user_txt1.TabIndex = 10;
             this.list_user_txt1.Text = "Roles List";
             // 
@@ -144,6 +144,20 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
+            // btn_Refresh
+            // 
+            this.btn_Refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
+            this.btn_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Refresh.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Refresh.ForeColor = System.Drawing.Color.White;
+            this.btn_Refresh.Image = ((System.Drawing.Image)(resources.GetObject("btn_Refresh.Image")));
+            this.btn_Refresh.Location = new System.Drawing.Point(573, 3);
+            this.btn_Refresh.Name = "btn_Refresh";
+            this.btn_Refresh.Size = new System.Drawing.Size(58, 46);
+            this.btn_Refresh.TabIndex = 21;
+            this.btn_Refresh.UseVisualStyleBackColor = false;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
+            // 
             // dgv_in_Role
             // 
             this.dgv_in_Role.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -164,7 +178,7 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_in_Role.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgv_in_Role.Location = new System.Drawing.Point(666, 190);
+            this.dgv_in_Role.Location = new System.Drawing.Point(502, 239);
             this.dgv_in_Role.Name = "dgv_in_Role";
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.SeaShell;
@@ -185,13 +199,14 @@
             this.dgv_in_Role.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Black;
             this.dgv_in_Role.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dgv_in_Role.RowTemplate.Height = 24;
-            this.dgv_in_Role.Size = new System.Drawing.Size(332, 361);
+            this.dgv_in_Role.Size = new System.Drawing.Size(634, 357);
             this.dgv_in_Role.TabIndex = 16;
             this.dgv_in_Role.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_in_Role_CellDoubleClick);
             // 
             // add_role_btn
             // 
             this.add_role_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
+            this.add_role_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.add_role_btn.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add_role_btn.ForeColor = System.Drawing.Color.White;
             this.add_role_btn.Image = ((System.Drawing.Image)(resources.GetObject("add_role_btn.Image")));
@@ -208,13 +223,14 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(314, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(248, 55);
+            this.button1.Size = new System.Drawing.Size(264, 55);
             this.button1.TabIndex = 12;
             this.button1.Text = "View Details";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -224,16 +240,14 @@
             // btn_Drop_Role
             // 
             this.btn_Drop_Role.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
+            this.btn_Drop_Role.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Drop_Role.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Drop_Role.ForeColor = System.Drawing.Color.White;
             this.btn_Drop_Role.Image = ((System.Drawing.Image)(resources.GetObject("btn_Drop_Role.Image")));
-            this.btn_Drop_Role.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Drop_Role.Location = new System.Drawing.Point(63, 355);
+            this.btn_Drop_Role.Location = new System.Drawing.Point(391, 252);
             this.btn_Drop_Role.Name = "btn_Drop_Role";
-            this.btn_Drop_Role.Size = new System.Drawing.Size(216, 55);
+            this.btn_Drop_Role.Size = new System.Drawing.Size(67, 72);
             this.btn_Drop_Role.TabIndex = 15;
-            this.btn_Drop_Role.Text = "Drop Role";
-            this.btn_Drop_Role.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Drop_Role.UseVisualStyleBackColor = false;
             this.btn_Drop_Role.Click += new System.EventHandler(this.btn_Drop_Role_Click);
             // 
@@ -241,9 +255,9 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
-            this.textBox1.Location = new System.Drawing.Point(12, 586);
+            this.textBox1.Location = new System.Drawing.Point(12, 644);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(620, 25);
             this.textBox1.TabIndex = 20;
@@ -259,21 +273,30 @@
             this.panel3.Controls.Add(this.button1);
             this.panel3.Location = new System.Drawing.Point(0, 74);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1350, 55);
+            this.panel3.Size = new System.Drawing.Size(1167, 55);
             this.panel3.TabIndex = 19;
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button3);
             this.panel4.Controls.Add(this.textBox2);
-            this.panel4.Location = new System.Drawing.Point(959, 0);
+            this.panel4.Controls.Add(this.button3);
+            this.panel4.Location = new System.Drawing.Point(776, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(379, 55);
+            this.panel4.Size = new System.Drawing.Size(379, 49);
             this.panel4.TabIndex = 16;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(12, 9);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(305, 32);
+            this.textBox2.TabIndex = 0;
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.Transparent;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.Location = new System.Drawing.Point(332, 3);
@@ -282,46 +305,12 @@
             this.button3.TabIndex = 2;
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(21, 9);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(305, 32);
-            this.textBox2.TabIndex = 0;
-            // 
-            // btn_Refresh
-            // 
-            this.btn_Refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
-            this.btn_Refresh.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Refresh.ForeColor = System.Drawing.Color.White;
-            this.btn_Refresh.Image = ((System.Drawing.Image)(resources.GetObject("btn_Refresh.Image")));
-            this.btn_Refresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Refresh.Location = new System.Drawing.Point(421, 192);
-            this.btn_Refresh.Name = "btn_Refresh";
-            this.btn_Refresh.Size = new System.Drawing.Size(178, 113);
-            this.btn_Refresh.TabIndex = 21;
-            this.btn_Refresh.Text = "Refresh";
-            this.btn_Refresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Refresh.UseVisualStyleBackColor = false;
-            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Crimson;
-            this.label1.Location = new System.Drawing.Point(255, 282);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(13, 17);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "*";
-            // 
             // pnVienDuoi
             // 
             this.pnVienDuoi.BackColor = System.Drawing.SystemColors.WindowText;
-            this.pnVienDuoi.Location = new System.Drawing.Point(45, 302);
+            this.pnVienDuoi.Location = new System.Drawing.Point(71, 310);
             this.pnVienDuoi.Name = "pnVienDuoi";
-            this.pnVienDuoi.Size = new System.Drawing.Size(204, 3);
+            this.pnVienDuoi.Size = new System.Drawing.Size(223, 3);
             this.pnVienDuoi.TabIndex = 24;
             // 
             // txtRolename
@@ -329,9 +318,9 @@
             this.txtRolename.BackColor = System.Drawing.SystemColors.Window;
             this.txtRolename.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRolename.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRolename.Location = new System.Drawing.Point(48, 280);
+            this.txtRolename.Location = new System.Drawing.Point(71, 279);
             this.txtRolename.Name = "txtRolename";
-            this.txtRolename.Size = new System.Drawing.Size(193, 25);
+            this.txtRolename.Size = new System.Drawing.Size(231, 25);
             this.txtRolename.TabIndex = 23;
             // 
             // lb_username_add
@@ -339,7 +328,7 @@
             this.lb_username_add.AutoSize = true;
             this.lb_username_add.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_username_add.ForeColor = System.Drawing.Color.Crimson;
-            this.lb_username_add.Location = new System.Drawing.Point(46, 254);
+            this.lb_username_add.Location = new System.Drawing.Point(123, 239);
             this.lb_username_add.Name = "lb_username_add";
             this.lb_username_add.Size = new System.Drawing.Size(116, 23);
             this.lb_username_add.TabIndex = 22;
@@ -350,13 +339,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1350, 617);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1167, 681);
             this.Controls.Add(this.pnVienDuoi);
             this.Controls.Add(this.txtRolename);
             this.Controls.Add(this.btn_Drop_Role);
             this.Controls.Add(this.lb_username_add);
-            this.Controls.Add(this.btn_Refresh);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgv_in_Role);
@@ -365,6 +352,7 @@
             this.Name = "Role";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Role";
+            this.Load += new System.EventHandler(this.Role_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -399,7 +387,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btn_Refresh;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnVienDuoi;
         private System.Windows.Forms.TextBox txtRolename;
         private System.Windows.Forms.Label lb_username_add;

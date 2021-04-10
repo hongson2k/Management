@@ -43,6 +43,7 @@ namespace GiaoDien
                 DataTable dtbl = new DataTable();
                 orcData1.Fill(dtbl);
                 dgvRole.DataSource = dtbl;
+                dgvRole.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
 
                 DataGridViewCheckBoxColumn revoke1 = new DataGridViewCheckBoxColumn();
                 revoke1.HeaderText = "Revoke";
@@ -54,6 +55,7 @@ namespace GiaoDien
                 DataTable dtb2 = new DataTable();
                 orcData2.Fill(dtb2);
                 dgvSys.DataSource = dtb2;
+                dgvSys.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
 
                 DataGridViewCheckBoxColumn revoke2 = new DataGridViewCheckBoxColumn();
                 revoke2.HeaderText = "Revoke";
@@ -64,6 +66,7 @@ namespace GiaoDien
                 DataTable dtb3 = new DataTable();
                 orcData3.Fill(dtb3);
                 dgvTbl.DataSource = dtb3;
+                dgvTbl.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
 
                 DataGridViewCheckBoxColumn revoke3 = new DataGridViewCheckBoxColumn();
                 revoke3.HeaderText = "Revoke";
@@ -74,6 +77,7 @@ namespace GiaoDien
                 DataTable dtb4 = new DataTable();
                 orcData4.Fill(dtb4);
                 dgvCol.DataSource = dtb4;
+                dgvCol.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
 
                 DataGridViewCheckBoxColumn revoke4 = new DataGridViewCheckBoxColumn();
                 revoke4.HeaderText = "Revoke";

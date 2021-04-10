@@ -47,18 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add_Role.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Add_Role.Designer.cs">
-      <DependentUpon>Add_Role.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Add_User.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Add_User.Designer.cs">
-      <DependentUpon>Add_User.cs</DependentUpon>
-    </Compile>
     <Compile Include="CreateUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,12 +70,6 @@
     </Compile>
     <Compile Include="Drop_User.Designer.cs">
       <DependentUpon>Drop_User.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit_User.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit_User.Designer.cs">
-      <DependentUpon>Edit_User.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Alert.cs">
       <SubType>Form</SubType>
@@ -157,12 +139,6 @@
     <Compile Include="View_Detail_Role.designer.cs">
       <DependentUpon>View_Detail_Role.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Add_Role.resx">
-      <DependentUpon>Add_Role.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Add_User.resx">
-      <DependentUpon>Add_User.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CreateUser.resx">
       <DependentUpon>CreateUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,9 +150,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Drop_User.resx">
       <DependentUpon>Drop_User.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit_User.resx">
-      <DependentUpon>Edit_User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Alert.resx">
       <DependentUpon>Form_Alert.cs</DependentUpon>

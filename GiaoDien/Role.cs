@@ -17,7 +17,7 @@ namespace GiaoDien
         public Role()
         {
             InitializeComponent();
-            displayData();
+            
         }
         public void displayData()
         {
@@ -28,6 +28,7 @@ namespace GiaoDien
                 DataTable dtbl = new DataTable();
                 orcData.Fill(dtbl);
                 dgv_in_Role.DataSource = dtbl;
+                dgv_in_Role.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
                 orcCont.Close();
             }
         }
@@ -58,7 +59,7 @@ namespace GiaoDien
             string username = txtRolename.Text;
             if (username == "")
             {
-                this.Alert_DropUser("Please input the username", Form_Alert.enmType.Failed);
+                this.Alert_DropUser("Please input the rolename", Form_Alert.enmType.Failed);
                 return;
             }
             else
@@ -112,6 +113,11 @@ namespace GiaoDien
         {
             string v = dgv_in_Role.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtRolename.Text = v;
+        }
+
+        private void Role_Load(object sender, EventArgs e)
+        {
+            displayData();
         }
     }
 }

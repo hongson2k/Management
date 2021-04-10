@@ -55,6 +55,7 @@ namespace GiaoDien
                 DataRow row = dtbl.NewRow();
                 orcData.Fill(dtbl);
                 dgvRole.DataSource = dtbl;
+                dgvRole.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
 
 
                 // add check box column
@@ -73,7 +74,7 @@ namespace GiaoDien
                 DataTable dtbl2 = new DataTable();
                 orcData2.Fill(dtbl2);
                 dgvSysPri.DataSource = dtbl2;
-
+                dgvSysPri.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
 
                 // add check box column
                 DataGridViewCheckBoxColumn chkgrant2 = new DataGridViewCheckBoxColumn();
@@ -89,7 +90,7 @@ namespace GiaoDien
                 DataTable dtbl3 = new DataTable();
                 orcData3.Fill(dtbl3);
                 dgvTable.DataSource = dtbl3;
-
+                dgvTable.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
 
                 // add check box column
                 DataGridViewCheckBoxColumn all = new DataGridViewCheckBoxColumn();
@@ -124,7 +125,7 @@ namespace GiaoDien
                 chk2.HeaderText = "Granted";
                 dgvCol.Columns.Add(chk2);
                 chk2.Width = 60;
-
+                dgvCol.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
                 orcCont.Close();
             }
         }

@@ -59,10 +59,12 @@
             this.tabGrantRole.Controls.Add(this.tabPage3);
             this.tabGrantRole.Controls.Add(this.tabSystemPrivileges);
             this.tabGrantRole.Controls.Add(this.tabPage1);
-            this.tabGrantRole.Location = new System.Drawing.Point(0, 2);
+            this.tabGrantRole.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabGrantRole.Location = new System.Drawing.Point(0, 3);
+            this.tabGrantRole.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabGrantRole.Name = "tabGrantRole";
             this.tabGrantRole.SelectedIndex = 0;
-            this.tabGrantRole.Size = new System.Drawing.Size(994, 407);
+            this.tabGrantRole.Size = new System.Drawing.Size(1491, 585);
             this.tabGrantRole.TabIndex = 0;
             this.tabGrantRole.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabGrantRole_MouseDown);
             // 
@@ -70,10 +72,11 @@
             // 
             this.tabPage3.Controls.Add(this.buttonGrant);
             this.tabPage3.Controls.Add(this.dgvRole);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Location = new System.Drawing.Point(4, 32);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(986, 378);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Size = new System.Drawing.Size(1483, 549);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Grant Roles";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -81,9 +84,10 @@
             // 
             // buttonGrant
             // 
-            this.buttonGrant.Location = new System.Drawing.Point(105, 393);
+            this.buttonGrant.Location = new System.Drawing.Point(158, 565);
+            this.buttonGrant.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonGrant.Name = "buttonGrant";
-            this.buttonGrant.Size = new System.Drawing.Size(75, 23);
+            this.buttonGrant.Size = new System.Drawing.Size(112, 33);
             this.buttonGrant.TabIndex = 1;
             this.buttonGrant.Text = "Granted";
             this.buttonGrant.UseVisualStyleBackColor = true;
@@ -92,21 +96,23 @@
             // dgvRole
             // 
             this.dgvRole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRole.Location = new System.Drawing.Point(0, 3);
+            this.dgvRole.Location = new System.Drawing.Point(412, 13);
+            this.dgvRole.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvRole.Name = "dgvRole";
             this.dgvRole.RowHeadersWidth = 51;
             this.dgvRole.RowTemplate.Height = 24;
-            this.dgvRole.Size = new System.Drawing.Size(542, 367);
+            this.dgvRole.Size = new System.Drawing.Size(813, 528);
             this.dgvRole.TabIndex = 0;
             this.dgvRole.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRole_CellContentClick);
             // 
             // tabSystemPrivileges
             // 
             this.tabSystemPrivileges.Controls.Add(this.dgvSysPri);
-            this.tabSystemPrivileges.Location = new System.Drawing.Point(4, 25);
+            this.tabSystemPrivileges.Location = new System.Drawing.Point(4, 32);
+            this.tabSystemPrivileges.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabSystemPrivileges.Name = "tabSystemPrivileges";
-            this.tabSystemPrivileges.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSystemPrivileges.Size = new System.Drawing.Size(986, 378);
+            this.tabSystemPrivileges.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabSystemPrivileges.Size = new System.Drawing.Size(1483, 549);
             this.tabSystemPrivileges.TabIndex = 3;
             this.tabSystemPrivileges.Text = "System Privileges";
             this.tabSystemPrivileges.UseVisualStyleBackColor = true;
@@ -114,11 +120,12 @@
             // dgvSysPri
             // 
             this.dgvSysPri.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSysPri.Location = new System.Drawing.Point(3, 3);
+            this.dgvSysPri.Location = new System.Drawing.Point(340, 11);
+            this.dgvSysPri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvSysPri.Name = "dgvSysPri";
             this.dgvSysPri.RowHeadersWidth = 51;
             this.dgvSysPri.RowTemplate.Height = 24;
-            this.dgvSysPri.Size = new System.Drawing.Size(564, 369);
+            this.dgvSysPri.Size = new System.Drawing.Size(846, 530);
             this.dgvSysPri.TabIndex = 0;
             // 
             // tabPage1
@@ -129,80 +136,101 @@
             this.tabPage1.Controls.Add(this.txtTable);
             this.tabPage1.Controls.Add(this.dgvCol);
             this.tabPage1.Controls.Add(this.dgvTable);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 36);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(986, 378);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Size = new System.Drawing.Size(1483, 545);
             this.tabPage1.TabIndex = 4;
             this.tabPage1.Text = "Object Privileges";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // buttonGrantSelect
             // 
-            this.buttonGrantSelect.Location = new System.Drawing.Point(668, 321);
+            this.buttonGrantSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
+            this.buttonGrantSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGrantSelect.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGrantSelect.ForeColor = System.Drawing.Color.White;
+            this.buttonGrantSelect.Location = new System.Drawing.Point(1016, 461);
+            this.buttonGrantSelect.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonGrantSelect.Name = "buttonGrantSelect";
-            this.buttonGrantSelect.Size = new System.Drawing.Size(75, 45);
+            this.buttonGrantSelect.Size = new System.Drawing.Size(169, 65);
             this.buttonGrantSelect.TabIndex = 5;
             this.buttonGrantSelect.Text = "Grant Select";
-            this.buttonGrantSelect.UseVisualStyleBackColor = true;
+            this.buttonGrantSelect.UseVisualStyleBackColor = false;
             this.buttonGrantSelect.Click += new System.EventHandler(this.buttonGrantSelect_Click);
             // 
             // buttonGrantUpdate
             // 
-            this.buttonGrantUpdate.Location = new System.Drawing.Point(905, 319);
+            this.buttonGrantUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
+            this.buttonGrantUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGrantUpdate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGrantUpdate.ForeColor = System.Drawing.Color.White;
+            this.buttonGrantUpdate.Location = new System.Drawing.Point(1301, 459);
+            this.buttonGrantUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonGrantUpdate.Name = "buttonGrantUpdate";
-            this.buttonGrantUpdate.Size = new System.Drawing.Size(75, 48);
+            this.buttonGrantUpdate.Size = new System.Drawing.Size(169, 69);
             this.buttonGrantUpdate.TabIndex = 4;
             this.buttonGrantUpdate.Text = "Grant Update";
-            this.buttonGrantUpdate.UseVisualStyleBackColor = true;
+            this.buttonGrantUpdate.UseVisualStyleBackColor = false;
             this.buttonGrantUpdate.Click += new System.EventHandler(this.buttonGrantUpdate_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(665, 3);
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(997, 9);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 17);
+            this.label7.Size = new System.Drawing.Size(93, 30);
             this.label7.TabIndex = 3;
             this.label7.Text = "TABLE: ";
             this.label7.Click += new System.EventHandler(this.label7_Click_1);
             // 
             // txtTable
             // 
-            this.txtTable.Location = new System.Drawing.Point(731, 0);
+            this.txtTable.Location = new System.Drawing.Point(1101, 6);
+            this.txtTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTable.Name = "txtTable";
-            this.txtTable.Size = new System.Drawing.Size(221, 22);
+            this.txtTable.Size = new System.Drawing.Size(330, 36);
             this.txtTable.TabIndex = 2;
             // 
             // dgvCol
             // 
             this.dgvCol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCol.Location = new System.Drawing.Point(668, 32);
+            this.dgvCol.Location = new System.Drawing.Point(1002, 46);
+            this.dgvCol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvCol.Name = "dgvCol";
             this.dgvCol.RowHeadersWidth = 51;
             this.dgvCol.RowTemplate.Height = 24;
-            this.dgvCol.Size = new System.Drawing.Size(312, 281);
+            this.dgvCol.Size = new System.Drawing.Size(468, 404);
             this.dgvCol.TabIndex = 1;
             // 
             // dgvTable
             // 
             this.dgvTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTable.Location = new System.Drawing.Point(0, 7);
+            this.dgvTable.Location = new System.Drawing.Point(4, 46);
+            this.dgvTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvTable.Name = "dgvTable";
             this.dgvTable.RowHeadersWidth = 51;
             this.dgvTable.RowTemplate.Height = 24;
-            this.dgvTable.Size = new System.Drawing.Size(605, 306);
+            this.dgvTable.Size = new System.Drawing.Size(908, 404);
             this.dgvTable.TabIndex = 0;
             this.dgvTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTable_CellClick);
             // 
             // buttonApply
             // 
-            this.buttonApply.Location = new System.Drawing.Point(356, 415);
+            this.buttonApply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
+            this.buttonApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonApply.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonApply.ForeColor = System.Drawing.Color.White;
+            this.buttonApply.Location = new System.Drawing.Point(1283, 630);
+            this.buttonApply.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonApply.Name = "buttonApply";
-            this.buttonApply.Size = new System.Drawing.Size(75, 32);
+            this.buttonApply.Size = new System.Drawing.Size(188, 61);
             this.buttonApply.TabIndex = 15;
             this.buttonApply.Text = "Apply";
-            this.buttonApply.UseVisualStyleBackColor = true;
+            this.buttonApply.UseVisualStyleBackColor = false;
             this.buttonApply.Click += new System.EventHandler(this.buttonApply_Click);
             // 
             // contextMenuStrip1
@@ -211,16 +239,18 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // GrantUser
+            // Grant_Role
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1084, 490);
+            this.ClientSize = new System.Drawing.Size(1507, 704);
             this.Controls.Add(this.buttonApply);
             this.Controls.Add(this.tabGrantRole);
-            this.Name = "GrantUser";
+            this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "Grant_Role";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Grant User";
+            this.Text = "Grant Role";
             this.tabGrantRole.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRole)).EndInit();

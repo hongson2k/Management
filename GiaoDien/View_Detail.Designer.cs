@@ -52,12 +52,12 @@
             this.btn_Revoke = new System.Windows.Forms.Button();
             this.tabRole = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dgvRole = new System.Windows.Forms.DataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgvSys = new System.Windows.Forms.DataGridView();
-            this.dgvTbl = new System.Windows.Forms.DataGridView();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dgvCol = new System.Windows.Forms.DataGridView();
+            this.dgvTbl = new System.Windows.Forms.DataGridView();
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -65,12 +65,12 @@
             this.pn_edit_user.SuspendLayout();
             this.tabRole.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRole)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSys)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTbl)).BeginInit();
+            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCol)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTbl)).BeginInit();
             this.SuspendLayout();
             // 
             // btnReturn_InGrant
@@ -96,7 +96,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(570, 14);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(750, 40);
+            this.panel1.Size = new System.Drawing.Size(822, 40);
             this.panel1.TabIndex = 23;
             // 
             // list_user_txt1
@@ -133,36 +133,36 @@
             // 
             // btn_Grant
             // 
-            this.btn_Grant.BackColor = System.Drawing.Color.DarkCyan;
+            this.btn_Grant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
             this.btn_Grant.FlatAppearance.BorderSize = 0;
             this.btn_Grant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Grant.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Grant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Grant.ForeColor = System.Drawing.Color.White;
             this.btn_Grant.Image = ((System.Drawing.Image)(resources.GetObject("btn_Grant.Image")));
             this.btn_Grant.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Grant.Location = new System.Drawing.Point(352, 138);
             this.btn_Grant.Name = "btn_Grant";
-            this.btn_Grant.Size = new System.Drawing.Size(191, 55);
+            this.btn_Grant.Size = new System.Drawing.Size(146, 55);
             this.btn_Grant.TabIndex = 25;
-            this.btn_Grant.Text = "Grant Roles";
+            this.btn_Grant.Text = "Grant";
             this.btn_Grant.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Grant.UseVisualStyleBackColor = false;
             this.btn_Grant.Click += new System.EventHandler(this.btnGrant_Click);
             // 
             // btnEdit_Save
             // 
-            this.btnEdit_Save.BackColor = System.Drawing.Color.Brown;
+            this.btnEdit_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
             this.btnEdit_Save.FlatAppearance.BorderSize = 0;
             this.btnEdit_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit_Save.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit_Save.ForeColor = System.Drawing.Color.White;
             this.btnEdit_Save.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit_Save.Image")));
             this.btnEdit_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit_Save.Location = new System.Drawing.Point(115, 427);
+            this.btnEdit_Save.Location = new System.Drawing.Point(32, 477);
             this.btnEdit_Save.Name = "btnEdit_Save";
-            this.btnEdit_Save.Size = new System.Drawing.Size(116, 59);
+            this.btnEdit_Save.Size = new System.Drawing.Size(254, 59);
             this.btnEdit_Save.TabIndex = 31;
-            this.btnEdit_Save.Text = "Save";
+            this.btnEdit_Save.Text = "Change Password";
             this.btnEdit_Save.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEdit_Save.UseVisualStyleBackColor = false;
             this.btnEdit_Save.Click += new System.EventHandler(this.btnEdit_Save_Click);
@@ -181,7 +181,7 @@
             this.pn_edit_user.Controls.Add(this.lb_psw_addUser);
             this.pn_edit_user.Controls.Add(this.txtEdit_username);
             this.pn_edit_user.Controls.Add(this.lb_username_add);
-            this.pn_edit_user.Location = new System.Drawing.Point(29, 60);
+            this.pn_edit_user.Location = new System.Drawing.Point(12, 102);
             this.pn_edit_user.Name = "pn_edit_user";
             this.pn_edit_user.Size = new System.Drawing.Size(290, 339);
             this.pn_edit_user.TabIndex = 30;
@@ -304,18 +304,18 @@
             // 
             // btn_Revoke
             // 
-            this.btn_Revoke.BackColor = System.Drawing.Color.DarkMagenta;
+            this.btn_Revoke.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
             this.btn_Revoke.FlatAppearance.BorderSize = 0;
             this.btn_Revoke.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Revoke.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Revoke.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Revoke.ForeColor = System.Drawing.Color.White;
             this.btn_Revoke.Image = ((System.Drawing.Image)(resources.GetObject("btn_Revoke.Image")));
             this.btn_Revoke.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Revoke.Location = new System.Drawing.Point(352, 220);
             this.btn_Revoke.Name = "btn_Revoke";
-            this.btn_Revoke.Size = new System.Drawing.Size(191, 55);
+            this.btn_Revoke.Size = new System.Drawing.Size(146, 55);
             this.btn_Revoke.TabIndex = 33;
-            this.btn_Revoke.Text = "Revoke Roles";
+            this.btn_Revoke.Text = "Revoke";
             this.btn_Revoke.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Revoke.UseVisualStyleBackColor = false;
             this.btn_Revoke.Click += new System.EventHandler(this.btn_Revoke_Click);
@@ -328,7 +328,7 @@
             this.tabRole.Location = new System.Drawing.Point(570, 56);
             this.tabRole.Name = "tabRole";
             this.tabRole.SelectedIndex = 0;
-            this.tabRole.Size = new System.Drawing.Size(754, 455);
+            this.tabRole.Size = new System.Drawing.Size(822, 527);
             this.tabRole.TabIndex = 0;
             // 
             // tabPage1
@@ -341,15 +341,35 @@
             this.tabPage1.Text = "Role";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // dgvRole
+            // 
+            this.dgvRole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRole.Location = new System.Drawing.Point(232, 8);
+            this.dgvRole.Name = "dgvRole";
+            this.dgvRole.RowHeadersWidth = 51;
+            this.dgvRole.RowTemplate.Height = 24;
+            this.dgvRole.Size = new System.Drawing.Size(295, 390);
+            this.dgvRole.TabIndex = 0;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dgvSys);
             this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(573, 419);
+            this.tabPage2.Size = new System.Drawing.Size(746, 419);
             this.tabPage2.TabIndex = 0;
             this.tabPage2.Text = "System Privileges";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dgvSys
+            // 
+            this.dgvSys.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSys.Location = new System.Drawing.Point(127, 8);
+            this.dgvSys.Name = "dgvSys";
+            this.dgvSys.RowHeadersWidth = 51;
+            this.dgvSys.RowTemplate.Height = 24;
+            this.dgvSys.Size = new System.Drawing.Size(507, 390);
+            this.dgvSys.TabIndex = 1;
             // 
             // tabPage3
             // 
@@ -358,61 +378,42 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 32);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(746, 419);
+            this.tabPage3.Size = new System.Drawing.Size(814, 491);
             this.tabPage3.TabIndex = 1;
             this.tabPage3.Text = "Object Privileges";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // dgvRole
+            // dgvCol
             // 
-            this.dgvRole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRole.Location = new System.Drawing.Point(32, 24);
-            this.dgvRole.Name = "dgvRole";
-            this.dgvRole.RowHeadersWidth = 51;
-            this.dgvRole.RowTemplate.Height = 24;
-            this.dgvRole.Size = new System.Drawing.Size(507, 390);
-            this.dgvRole.TabIndex = 0;
-            // 
-            // dgvSys
-            // 
-            this.dgvSys.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSys.Location = new System.Drawing.Point(33, 14);
-            this.dgvSys.Name = "dgvSys";
-            this.dgvSys.RowHeadersWidth = 51;
-            this.dgvSys.RowTemplate.Height = 24;
-            this.dgvSys.Size = new System.Drawing.Size(507, 390);
-            this.dgvSys.TabIndex = 1;
+            this.dgvCol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCol.Location = new System.Drawing.Point(388, 14);
+            this.dgvCol.Name = "dgvCol";
+            this.dgvCol.RowHeadersWidth = 51;
+            this.dgvCol.RowTemplate.Height = 24;
+            this.dgvCol.Size = new System.Drawing.Size(420, 390);
+            this.dgvCol.TabIndex = 2;
             // 
             // dgvTbl
             // 
             this.dgvTbl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTbl.Location = new System.Drawing.Point(33, 14);
+            this.dgvTbl.Location = new System.Drawing.Point(3, 14);
             this.dgvTbl.Name = "dgvTbl";
             this.dgvTbl.RowHeadersWidth = 51;
             this.dgvTbl.RowTemplate.Height = 24;
-            this.dgvTbl.Size = new System.Drawing.Size(227, 390);
+            this.dgvTbl.Size = new System.Drawing.Size(358, 390);
             this.dgvTbl.TabIndex = 1;
-            // 
-            // dgvCol
-            // 
-            this.dgvCol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCol.Location = new System.Drawing.Point(340, 14);
-            this.dgvCol.Name = "dgvCol";
-            this.dgvCol.RowHeadersWidth = 51;
-            this.dgvCol.RowTemplate.Height = 24;
-            this.dgvCol.Size = new System.Drawing.Size(356, 390);
-            this.dgvCol.TabIndex = 2;
             // 
             // btn_Refresh
             // 
             this.btn_Refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
-            this.btn_Refresh.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Refresh.ForeColor = System.Drawing.Color.White;
             this.btn_Refresh.Image = ((System.Drawing.Image)(resources.GetObject("btn_Refresh.Image")));
             this.btn_Refresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Refresh.Location = new System.Drawing.Point(352, 300);
+            this.btn_Refresh.Location = new System.Drawing.Point(352, 305);
             this.btn_Refresh.Name = "btn_Refresh";
-            this.btn_Refresh.Size = new System.Drawing.Size(191, 54);
+            this.btn_Refresh.Size = new System.Drawing.Size(146, 55);
             this.btn_Refresh.TabIndex = 34;
             this.btn_Refresh.Text = "Refresh";
             this.btn_Refresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -424,7 +425,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1347, 528);
+            this.ClientSize = new System.Drawing.Size(1419, 609);
             this.Controls.Add(this.btn_Refresh);
             this.Controls.Add(this.tabRole);
             this.Controls.Add(this.btn_Revoke);
@@ -447,12 +448,12 @@
             this.pn_edit_user.PerformLayout();
             this.tabRole.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRole)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSys)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTbl)).EndInit();
+            this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCol)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTbl)).EndInit();
             this.ResumeLayout(false);
 
         }

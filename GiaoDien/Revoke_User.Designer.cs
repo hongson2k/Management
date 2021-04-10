@@ -52,10 +52,10 @@
             this.tabRole.Controls.Add(this.tabPage1);
             this.tabRole.Controls.Add(this.tabPage2);
             this.tabRole.Controls.Add(this.tabPage3);
-            this.tabRole.Location = new System.Drawing.Point(12, 31);
+            this.tabRole.Location = new System.Drawing.Point(12, 12);
             this.tabRole.Name = "tabRole";
             this.tabRole.SelectedIndex = 0;
-            this.tabRole.Size = new System.Drawing.Size(1296, 525);
+            this.tabRole.Size = new System.Drawing.Size(1375, 541);
             this.tabRole.TabIndex = 24;
             // 
             // tabPage1
@@ -63,7 +63,7 @@
             this.tabPage1.Controls.Add(this.dgvRole);
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1288, 489);
+            this.tabPage1.Size = new System.Drawing.Size(1367, 505);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Role";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -72,11 +72,11 @@
             // dgvRole
             // 
             this.dgvRole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRole.Location = new System.Drawing.Point(32, 24);
+            this.dgvRole.Location = new System.Drawing.Point(290, 46);
             this.dgvRole.Name = "dgvRole";
             this.dgvRole.RowHeadersWidth = 51;
             this.dgvRole.RowTemplate.Height = 24;
-            this.dgvRole.Size = new System.Drawing.Size(635, 390);
+            this.dgvRole.Size = new System.Drawing.Size(685, 390);
             this.dgvRole.TabIndex = 0;
             this.dgvRole.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRole_CellContentClick);
             // 
@@ -85,7 +85,7 @@
             this.tabPage2.Controls.Add(this.dgvSys);
             this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1288, 489);
+            this.tabPage2.Size = new System.Drawing.Size(1367, 505);
             this.tabPage2.TabIndex = 0;
             this.tabPage2.Text = "System Privileges";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -93,11 +93,11 @@
             // dgvSys
             // 
             this.dgvSys.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSys.Location = new System.Drawing.Point(33, 14);
+            this.dgvSys.Location = new System.Drawing.Point(210, 40);
             this.dgvSys.Name = "dgvSys";
             this.dgvSys.RowHeadersWidth = 51;
             this.dgvSys.RowTemplate.Height = 24;
-            this.dgvSys.Size = new System.Drawing.Size(992, 390);
+            this.dgvSys.Size = new System.Drawing.Size(860, 390);
             this.dgvSys.TabIndex = 1;
             // 
             // tabPage3
@@ -107,7 +107,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 32);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1288, 489);
+            this.tabPage3.Size = new System.Drawing.Size(1367, 505);
             this.tabPage3.TabIndex = 1;
             this.tabPage3.Text = "Object Privileges";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -115,38 +115,42 @@
             // dgvCol
             // 
             this.dgvCol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCol.Location = new System.Drawing.Point(630, 14);
+            this.dgvCol.Location = new System.Drawing.Point(795, 37);
             this.dgvCol.Name = "dgvCol";
             this.dgvCol.RowHeadersWidth = 51;
             this.dgvCol.RowTemplate.Height = 24;
-            this.dgvCol.Size = new System.Drawing.Size(634, 390);
+            this.dgvCol.Size = new System.Drawing.Size(497, 390);
             this.dgvCol.TabIndex = 2;
             // 
             // dgvTbl
             // 
             this.dgvTbl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTbl.Location = new System.Drawing.Point(75, 14);
+            this.dgvTbl.Location = new System.Drawing.Point(83, 37);
             this.dgvTbl.Name = "dgvTbl";
             this.dgvTbl.RowHeadersWidth = 51;
             this.dgvTbl.RowTemplate.Height = 24;
-            this.dgvTbl.Size = new System.Drawing.Size(423, 390);
+            this.dgvTbl.Size = new System.Drawing.Size(634, 390);
             this.dgvTbl.TabIndex = 1;
             // 
             // buttonApply
             // 
-            this.buttonApply.Location = new System.Drawing.Point(529, 589);
+            this.buttonApply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
+            this.buttonApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonApply.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonApply.ForeColor = System.Drawing.Color.White;
+            this.buttonApply.Location = new System.Drawing.Point(1104, 568);
             this.buttonApply.Name = "buttonApply";
-            this.buttonApply.Size = new System.Drawing.Size(262, 67);
+            this.buttonApply.Size = new System.Drawing.Size(222, 67);
             this.buttonApply.TabIndex = 25;
             this.buttonApply.Text = "Apply";
-            this.buttonApply.UseVisualStyleBackColor = true;
+            this.buttonApply.UseVisualStyleBackColor = false;
             this.buttonApply.Click += new System.EventHandler(this.buttonApply_Click);
             // 
             // Revoke_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1812, 802);
+            this.ClientSize = new System.Drawing.Size(1390, 644);
             this.Controls.Add(this.buttonApply);
             this.Controls.Add(this.tabRole);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

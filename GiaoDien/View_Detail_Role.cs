@@ -30,29 +30,30 @@ namespace GiaoDien
                 DataTable dtbl = new DataTable();
                 orcData1.Fill(dtbl);
                 dgvRole.DataSource = dtbl;
-                
-               
+                dgvRole.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
+
 
                 OracleDataAdapter orcData2 = new OracleDataAdapter("select PRIVILEGE from DBA_SYS_PRIVS WHERE GRANTEE = '" + txtEIDT_rolename.Text + "'", orcCont);
                 DataTable dtb2 = new DataTable();
                 orcData2.Fill(dtb2);
                 dgvSys.DataSource = dtb2;
+                dgvSys.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
 
-                
 
                 OracleDataAdapter orcData3 = new OracleDataAdapter("select TABLE_NAME, PRIVILEGE from USER_TAB_PRIVS WHERE GRANTEE = '" + txtEIDT_rolename.Text + "'", orcCont);
                 DataTable dtb3 = new DataTable();
                 orcData3.Fill(dtb3);
                 dgvTbl.DataSource = dtb3;
+                dgvTbl.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
 
-                
+
 
                 OracleDataAdapter orcData4 = new OracleDataAdapter("select TABLE_NAME, COLUMN_NAME, PRIVILEGE from USER_COL_PRIVS WHERE GRANTEE = '" + txtEIDT_rolename.Text + "'", orcCont);
                 DataTable dtb4 = new DataTable();
                 orcData4.Fill(dtb4);
                 dgvCol.DataSource = dtb4;
+                dgvCol.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
 
-             
                 orcCont.Close();
             }
         }
@@ -87,10 +88,7 @@ namespace GiaoDien
 
         private void btn_Edit_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Edit_User EditU = new Edit_User();
-            EditU.ShowDialog();
-            this.Close();
+            
         }
 
         private void dgv_in_EditUser_CellContentClick(object sender, DataGridViewCellEventArgs e)

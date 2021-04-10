@@ -40,6 +40,7 @@ namespace GiaoDien
                 DataRow row = dtbl.NewRow();
                 orcData.Fill(dtbl);
                 dgvRole.DataSource = dtbl;
+                dgvRole.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
 
 
                 // add check box column
@@ -58,6 +59,7 @@ namespace GiaoDien
                 DataTable dtbl2 = new DataTable();
                 orcData2.Fill(dtbl2);
                 dgvSysPri.DataSource = dtbl2;
+                dgvSysPri.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
 
 
                 // add check box column
@@ -74,6 +76,7 @@ namespace GiaoDien
                 DataTable dtbl3 = new DataTable();
                 orcData3.Fill(dtbl3);
                 dgvTable.DataSource = dtbl3;
+                dgvTable.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
 
 
                 // add check box column
@@ -109,6 +112,8 @@ namespace GiaoDien
                 chk2.HeaderText = "Granted";
                 dgvCol.Columns.Add(chk2);
                 chk2.Width = 60;
+
+                dgvCol.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
 
                 orcCont.Close();
             }
@@ -268,12 +273,14 @@ namespace GiaoDien
         {
             if (txtRoleName.Text == "" )
             {
-                MessageBox.Show("Xin điền đầy đủ thông tin", "THÔNG BÁO", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                this.Alert_GrantUser("Please input the rolename", Form_Alert.enmType.Failed);
+                //MessageBox.Show("Xin điền đầy đủ thông tin", "THÔNG BÁO", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 return;
             }
             if (txtNewPass.Text != txtConfirmPass.Text)
             {
-                MessageBox.Show("Mật khẩu xác nhận không khớp", "THÔNG BÁO", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                this.Alert_GrantUser("Confirm password does not match", Form_Alert.enmType.Failed);
+                //MessageBox.Show("Mật khẩu xác nhận không khớp", "THÔNG BÁO", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 return;
             }
             string sql;
@@ -510,6 +517,11 @@ namespace GiaoDien
             User usera = new User();
             usera.ShowDialog();
             this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

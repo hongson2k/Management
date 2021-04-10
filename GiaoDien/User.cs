@@ -17,7 +17,7 @@ namespace GiaoDien
         public User()
         {
             InitializeComponent();
-            displayData();
+            
         }
         public void Alert_DropUser(string msg, Form_Alert.enmType type)
         {
@@ -29,14 +29,7 @@ namespace GiaoDien
             private void buttom_in_User_Click(object sender, EventArgs e)
         {
             
-            using (OracleConnection orcCont = new OracleConnection(connectionString))
-            {
-                orcCont.Open();
-                OracleDataAdapter orcData = new OracleDataAdapter("select * from all_users order by created desc ", orcCont);
-                DataTable dtbl = new DataTable();
-                orcData.Fill(dtbl);
-                dgv_UserList.DataSource = dtbl;
-            }
+           
         }
         //Hàm displayData
         public void displayData()
@@ -48,6 +41,7 @@ namespace GiaoDien
                 DataTable dtbl = new DataTable();
                 orcData.Fill(dtbl);
                 dgv_UserList.DataSource = dtbl;
+                dgv_UserList.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
                 orcCont.Close();
             }
         }
@@ -144,6 +138,11 @@ namespace GiaoDien
         }
 
         private void btn_Refresh_Click(object sender, EventArgs e)
+        {
+            displayData();
+        }
+
+        private void User_Load(object sender, EventArgs e)
         {
             displayData();
         }
