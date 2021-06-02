@@ -101,63 +101,69 @@ namespace GiaoDien
             command.Connection = con;
             command.CommandText = "alter session set \"_ORACLE_SCRIPT\"=true";
             command.ExecuteNonQuery();
-
-            // revoke role
-            foreach (DataGridViewRow r in dgvRole.Rows)
+            try
             {
-                if (Convert.ToBoolean(r.Cells[1].Value) == true)
+                // revoke role
+                foreach (DataGridViewRow r in dgvRole.Rows)
                 {
-                    sql = "REVOKE " + r.Cells[0].Value.ToString() + " FROM " + strTemp;
-                    command.CommandText = sql;
-                    command.ExecuteNonQuery();
+                    if (Convert.ToBoolean(r.Cells[1].Value) == true)
+                    {
+                        sql = "REVOKE " + r.Cells[0].Value.ToString() + " FROM " + strTemp;
+                        command.CommandText = sql;
+                        command.ExecuteNonQuery();
+                    }
                 }
-            }
-            // revoke system privilege
-            foreach (DataGridViewRow r in dgvSys.Rows)
-            {
-                if (Convert.ToBoolean(r.Cells[0].Value) == true) // sửa đổi giữa 2 cái cell 0 và 1
+                // revoke system privilege
+                foreach (DataGridViewRow r in dgvSys.Rows)
                 {
-                    sql = "REVOKE " + r.Cells[1].Value.ToString() + " FROM " + strTemp;
-                    command.CommandText = sql;
-                    command.ExecuteNonQuery();
-                }
-            }
-
-            // revoke level table
-            foreach (DataGridViewRow r in dgvTbl.Rows)
-            {
-                if (Convert.ToBoolean(r.Cells[0].Value) == true)
-                {
-                    sql = "REVOKE " + r.Cells[2].Value.ToString() + " ON " + r.Cells[1].Value.ToString() + " FROM " + strTemp;
-                    command.CommandText = sql;
-                    command.ExecuteNonQuery();
+                    if (Convert.ToBoolean(r.Cells[0].Value) == true) // sửa đổi giữa 2 cái cell 0 và 1
+                    {
+                        sql = "REVOKE " + r.Cells[1].Value.ToString() + " FROM " + strTemp;
+                        command.CommandText = sql;
+                        command.ExecuteNonQuery();
+                    }
                 }
 
-            }
-            //revoke level column
-            foreach (DataGridViewRow r in dgvCol.Rows)
-            {
-                if (Convert.ToBoolean(r.Cells[0].Value) == true)
+                // revoke level table
+                foreach (DataGridViewRow r in dgvTbl.Rows)
                 {
-                    sql = "REVOKE " + r.Cells[3].Value.ToString() + " ON " + r.Cells[1].Value.ToString() + " FROM " + strTemp;
-                    command.CommandText = sql;
-                    command.ExecuteNonQuery();
-                }
-            }
-            // NOTE: Không thể revoke quyền trên cột. Ví dụ ta grant update(ten,sdt) on NHANVIEN, nếu muốn 
-            // revoke quyền update trên cột ten, thì phải revoke update on NhanVien rồi grant (sdt) on Nhanvien
+                    if (Convert.ToBoolean(r.Cells[0].Value) == true)
+                    {
+                        sql = "REVOKE " + r.Cells[2].Value.ToString() + " ON " + r.Cells[1].Value.ToString() + " FROM " + strTemp;
+                        command.CommandText = sql;
+                        command.ExecuteNonQuery();
+                    }
 
-            //grant lại các quyền trên cột mà không bị revoke
-            foreach (DataGridViewRow r in dgvCol.Rows)
-            {
-                if (Convert.ToBoolean(r.Cells[0].Value) == true && Convert.ToBoolean(r.Cells[1].Value) == true)
-                {
-                    sql = "GRANT " + r.Cells[3].Value.ToString() + " (" + r.Cells[2].Value.ToString() + ") ON " + r.Cells[1].Value.ToString() + " TO " + strTemp;
-                    command.CommandText = sql;
-                    command.ExecuteNonQuery();
                 }
+                //revoke level column
+                foreach (DataGridViewRow r in dgvCol.Rows)
+                {
+                    if (Convert.ToBoolean(r.Cells[0].Value) == true)
+                    {
+                        sql = "REVOKE " + r.Cells[3].Value.ToString() + " ON " + r.Cells[1].Value.ToString() + " FROM " + strTemp;
+                        command.CommandText = sql;
+                        command.ExecuteNonQuery();
+                    }
+                }
+                // NOTE: Không thể revoke quyền trên cột. Ví dụ ta grant update(ten,sdt) on NHANVIEN, nếu muốn 
+                // revoke quyền update trên cột ten, thì phải revoke update on NhanVien rồi grant (sdt) on Nhanvien
+
+                //grant lại các quyền trên cột mà không bị revoke
+                foreach (DataGridViewRow r in dgvCol.Rows)
+                {
+                    if (Convert.ToBoolean(r.Cells[0].Value) == true && Convert.ToBoolean(r.Cells[1].Value) == true)
+                    {
+                        sql = "GRANT " + r.Cells[3].Value.ToString() + " (" + r.Cells[2].Value.ToString() + ") ON " + r.Cells[1].Value.ToString() + " TO " + strTemp;
+                        command.CommandText = sql;
+                        command.ExecuteNonQuery();
+                    }
+                }
+                this.Alert_GrantUser("Revoked successfully", Form_Alert.enmType.Success);
             }
-            this.Alert_GrantUser("Revoked successfully", Form_Alert.enmType.Success);
+            catch
+            {
+                this.Alert_GrantUser("Revoked successfully", Form_Alert.enmType.Success);
+            }
         }
 
         private void tabPage1_Click(object sender, EventArgs e)

@@ -43,6 +43,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.topdashboard_text = new System.Windows.Forms.TextBox();
             this.MenuCenter = new System.Windows.Forms.Panel();
+            this.add_role_btn = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
@@ -76,7 +77,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.add_role_btn = new System.Windows.Forms.Button();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -304,6 +304,21 @@
             this.MenuCenter.Size = new System.Drawing.Size(1228, 801);
             this.MenuCenter.TabIndex = 2;
             this.MenuCenter.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuCenter_Paint);
+            // 
+            // add_role_btn
+            // 
+            this.add_role_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
+            this.add_role_btn.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_role_btn.ForeColor = System.Drawing.Color.White;
+            this.add_role_btn.Image = ((System.Drawing.Image)(resources.GetObject("add_role_btn.Image")));
+            this.add_role_btn.Location = new System.Drawing.Point(673, 613);
+            this.add_role_btn.Name = "add_role_btn";
+            this.add_role_btn.Size = new System.Drawing.Size(212, 110);
+            this.add_role_btn.TabIndex = 11;
+            this.add_role_btn.Text = "Add Role";
+            this.add_role_btn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.add_role_btn.UseVisualStyleBackColor = false;
+            this.add_role_btn.Click += new System.EventHandler(this.add_role_btn_Click);
             // 
             // panel10
             // 
@@ -699,21 +714,6 @@
             this.textBox1.Size = new System.Drawing.Size(305, 32);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // add_role_btn
-            // 
-            this.add_role_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
-            this.add_role_btn.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add_role_btn.ForeColor = System.Drawing.Color.White;
-            this.add_role_btn.Image = ((System.Drawing.Image)(resources.GetObject("add_role_btn.Image")));
-            this.add_role_btn.Location = new System.Drawing.Point(673, 613);
-            this.add_role_btn.Name = "add_role_btn";
-            this.add_role_btn.Size = new System.Drawing.Size(212, 110);
-            this.add_role_btn.TabIndex = 11;
-            this.add_role_btn.Text = "Add Role";
-            this.add_role_btn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.add_role_btn.UseVisualStyleBackColor = false;
-            this.add_role_btn.Click += new System.EventHandler(this.add_role_btn_Click);
             // 
             // PhanHe1
             // 
