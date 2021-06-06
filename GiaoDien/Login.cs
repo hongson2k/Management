@@ -35,6 +35,42 @@ namespace GiaoDien
             try
             {
                 conn.Open();
+                if (username == "QLTNNS1")
+                {
+                    //MessageBox.Show("Tài khoản thuộc role:Quanly Tai nguyen va nhan su . \n", "Thông báo", MessageBoxButtons.OK);
+
+                    GDQuanlyTNNS gd = new GDQuanlyTNNS();
+                    gd.username = username;
+                    gd.password = password;
+                    this.Hide();
+                    gd.ShowDialog();
+                    gd.Close();
+                }
+
+                if (username == "QLTV1")
+                {
+                    //MessageBox.Show("Tài khoản thuộc role:Quanly Tai nguyen va nhan su . \n", "Thông báo", MessageBoxButtons.OK);
+
+                    GDQuanLyTaiVu gd = new GDQuanLyTaiVu();
+                    gd.username = username;
+                    gd.password = password;
+                    this.Hide();
+                    gd.ShowDialog();
+                    gd.Close();
+                }
+
+                if (username == "QLCM1")
+                {
+                    //MessageBox.Show("Tài khoản thuộc role:Quanly Tai nguyen va nhan su . \n", "Thông báo", MessageBoxButtons.OK);
+
+                    GDQuanLyCM gd = new GDQuanLyCM();
+                    gd.username = username;
+                    gd.password = password;
+                    this.Hide();
+                    gd.ShowDialog();
+                    gd.Close();
+                }
+
                 if (username == "BS1" || username == "BS2")
                 {
                     //MessageBox.Show("Tài khoản thuộc role: BACSI . \n", "Thông báo", MessageBoxButtons.OK);
@@ -46,7 +82,61 @@ namespace GiaoDien
                     gd.ShowDialog();
                     gd.Close();
                 }
+                if (username == "TT1" || username == "TT2")
+                {
+                    //MessageBox.Show("Tài khoản thuộc role: TiepTan . \n", "Thông báo", MessageBoxButtons.OK);
 
+                    GDTiepTan gd = new GDTiepTan();
+                    gd.username = username;
+                    gd.password = password;
+                    this.Hide();
+                    gd.ShowDialog();
+                    gd.Close();
+                }
+                if (username == "TV1" || username == "TV2")
+                {
+                    //MessageBox.Show("Tài khoản thuộc role: TaiVu . \n", "Thông báo", MessageBoxButtons.OK);
+
+                    GDTaiVu gd = new GDTaiVu();
+                    gd.username = username;
+                    gd.password = password;
+                    this.Hide();
+                    gd.ShowDialog();
+                    gd.Close();
+                }
+                if (username == "BT1" || username == "BT2")
+                {
+                    //MessageBox.Show("Tài khoản thuộc role: BanThuoc . \n", "Thông báo", MessageBoxButtons.OK);
+
+                    GDBanThuoc gd = new GDBanThuoc();
+                    gd.username = username;
+                    gd.password = password;
+                    this.Hide();
+                    gd.ShowDialog();
+                    gd.Close();
+                }
+                if (username == "KT1" || username == "KT2")
+                {
+                    //MessageBox.Show("Tài khoản thuộc role: KeToan . \n", "Thông báo", MessageBoxButtons.OK);
+
+                    GDKeToan gd = new GDKeToan();
+                    gd.username = username;
+                    gd.password = password;
+                    this.Hide();
+                    gd.ShowDialog();
+                    gd.Close();
+                }
+                if (username == "KTV1" || username == "KTV2")
+                {
+                    //MessageBox.Show("Tài khoản thuộc role: KeToan . \n", "Thông báo", MessageBoxButtons.OK);
+
+                    GDKyThuatVien gd = new GDKyThuatVien();
+                    gd.username = username;
+                    gd.password = password;
+                    this.Hide();
+                    gd.ShowDialog();
+                    gd.Close();
+                }
 
                 if (username == "ADQLBV")
                 {

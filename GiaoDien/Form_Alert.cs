@@ -47,7 +47,7 @@ namespace GiaoDien
             switch (this.action)
             {
                 case enmAction.wait:
-                    timer1.Interval = 5000;
+                    timer1.Interval = 10000;
                     action = enmAction.close;
                     break;
                 case enmAction.start:

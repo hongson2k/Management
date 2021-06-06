@@ -83,6 +83,54 @@
     <Compile Include="GDBacSi.Designer.cs">
       <DependentUpon>GDBacSi.cs</DependentUpon>
     </Compile>
+    <Compile Include="GDBanThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GDBanThuoc.Designer.cs">
+      <DependentUpon>GDBanThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GDKeToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GDKeToan.Designer.cs">
+      <DependentUpon>GDKeToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GDKyThuatVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GDKyThuatVien.Designer.cs">
+      <DependentUpon>GDKyThuatVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GDQuanLyCM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GDQuanLyCM.Designer.cs">
+      <DependentUpon>GDQuanLyCM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GDQuanLyTaiVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GDQuanLyTaiVu.Designer.cs">
+      <DependentUpon>GDQuanLyTaiVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GDQuanlyTNNS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GDQuanlyTNNS.Designer.cs">
+      <DependentUpon>GDQuanlyTNNS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GDTaiVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GDTaiVu.Designer.cs">
+      <DependentUpon>GDTaiVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GDTiepTan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GDTiepTan.Designer.cs">
+      <DependentUpon>GDTiepTan.cs</DependentUpon>
+    </Compile>
     <Compile Include="GrantUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +211,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GDBacSi.resx">
       <DependentUpon>GDBacSi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GDBanThuoc.resx">
+      <DependentUpon>GDBanThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GDKeToan.resx">
+      <DependentUpon>GDKeToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GDKyThuatVien.resx">
+      <DependentUpon>GDKyThuatVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GDQuanLyCM.resx">
+      <DependentUpon>GDQuanLyCM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GDQuanLyTaiVu.resx">
+      <DependentUpon>GDQuanLyTaiVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GDQuanlyTNNS.resx">
+      <DependentUpon>GDQuanlyTNNS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GDTaiVu.resx">
+      <DependentUpon>GDTaiVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GDTiepTan.resx">
+      <DependentUpon>GDTiepTan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GrantUser.resx">
       <DependentUpon>GrantUser.cs</DependentUpon>

@@ -19,9 +19,10 @@ namespace GiaoDien
         }
         public string username;
         public string password;
+
         //public void displayData()
         //{
-            
+
         //    using (OracleConnection conn = DBConnection.GetConnection(username, password))
         //    {
         //        conn.Open();
@@ -33,13 +34,18 @@ namespace GiaoDien
         //        conn.Close();
         //    }
         //}
+        public void Alert_GDBacSi(string msg, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(msg, type);
+        }
         public void displayData_In4_Bacsi()
         {
 
             using (OracleConnection conn = DBConnection.GetConnection(username, password))
             {
                 conn.Open();
-                OracleDataAdapter orcData = new OracleDataAdapter("select * from ADQLBV.NHANVIEN ", conn);
+                OracleDataAdapter orcData = new OracleDataAdapter("select * from ADMINBV.NHANVIEN ", conn);
                 DataTable dtbl = new DataTable();
                 orcData.Fill(dtbl);
                 lb_manv.Text = dtbl.Rows[0][0].ToString();
@@ -50,8 +56,9 @@ namespace GiaoDien
                 lb_Luong.Text = dtbl.Rows[0][5].ToString();
                 txt_GioiTinh.Text = dtbl.Rows[0][6].ToString();
                 lb_PhuCap.Text = dtbl.Rows[0][7].ToString();
-                lbDonVi.Text = dtbl.Rows[0][8].ToString();
-                lbVaiTro.Text = dtbl.Rows[0][9].ToString();
+                
+                lbVaiTro.Text = dtbl.Rows[0][8].ToString();
+                lbDonVi.Text = dtbl.Rows[0][9].ToString();
 
                 lbWelcome.Text = dtbl.Rows[0][1].ToString();
                 conn.Close();
@@ -78,6 +85,237 @@ namespace GiaoDien
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+            //OracleConnection conn = DBConnection.GetConnection(username, password);
+            //using (OracleConnection conn = DBConnection.GetConnection(username, password))
+            //{
+            //    conn.Open();
+            //    string queryUpdate1 = "UPDATE ADMINBV.NHANVIEN SET HoTen = '" + txt_TenNhanVien.Text + "' WHERE MANHANVIEN " + lb_manv.Text;
+            //    OracleCommand cmdMain = new OracleCommand(queryUpdate1, conn);
+            //    cmdMain.ExecuteNonQuery();
+            //    conn.Close();
+
+            //}
+            OracleConnection conn = DBConnection.GetConnection(username, password);
+            try
+            {
+                conn.Open();
+                //string sql = "UPDATE ADMINBV.NHANVIEN SET HoTen = '" + txt_TenNhanVien.Text + "', DiaChi = '" + txt_DiaChi.Text +"' WHERE MANHANVIEN = '" + lb_manv.Text+"'";
+                string sql = "UPDATE ADMINBV.NHANVIEN SET HoTen = '" + txt_TenNhanVien.Text + "', DiaChi = '" + txt_DiaChi.Text + "', GioiTinh = '" + txt_GioiTinh.Text + "', CMND = '" + txt_CMND.Text + "' WHERE MANHANVIEN = '" + lb_manv.Text + "'";
+                OracleCommand cmd = new OracleCommand(sql, conn);
+                cmd.CommandType = CommandType.Text;
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Updated successfully !!!");
+                //this.Alert_GDBacSi("Updated successfully !!!", Form_Alert.enmType.Success);
+                displayData_In4_Bacsi();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void panel10_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lbWelcome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lb_PhuCap_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_Luong_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_manv_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_mnv_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbDonVi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_TenNhanVien_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbVaiTro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_DiaChi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_GioiTinh_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_NgaySinh_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_CMND_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
         {
 
         }
