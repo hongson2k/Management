@@ -47,6 +47,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChamCongCaNhan\ChamCongKeToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChamCongCaNhan\ChamCongKeToan.Designer.cs">
+      <DependentUpon>ChamCongKeToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChamCongCaNhan\ChamCongQLCM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChamCongCaNhan\ChamCongQLCM.Designer.cs">
+      <DependentUpon>ChamCongQLCM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChamCongCaNhan\ChamCongQLTNNS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChamCongCaNhan\ChamCongQLTNNS.Designer.cs">
+      <DependentUpon>ChamCongQLTNNS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChamCongCaNhan\ChamCongQLTV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChamCongCaNhan\ChamCongQLTV.Designer.cs">
+      <DependentUpon>ChamCongQLTV.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +168,18 @@
       <DependentUpon>Grant_Role.cs</DependentUpon>
     </Compile>
     <Compile Include="KetNoi.cs" />
+    <Compile Include="NhanSu\KeToan_NhanSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\KeToan_NhanSu.Designer.cs">
+      <DependentUpon>KeToan_NhanSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanSu\QuanLyTNNS_NhanSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\QuanLyTNNS_NhanSu.Designer.cs">
+      <DependentUpon>QuanLyTNNS_NhanSu.cs</DependentUpon>
+    </Compile>
     <Compile Include="RevokeRole.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +230,18 @@
     <Compile Include="View_Detail_Role.designer.cs">
       <DependentUpon>View_Detail_Role.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChamCongCaNhan\ChamCongKeToan.resx">
+      <DependentUpon>ChamCongKeToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChamCongCaNhan\ChamCongQLCM.resx">
+      <DependentUpon>ChamCongQLCM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChamCongCaNhan\ChamCongQLTNNS.resx">
+      <DependentUpon>ChamCongQLTNNS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChamCongCaNhan\ChamCongQLTV.resx">
+      <DependentUpon>ChamCongQLTV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateUser.resx">
       <DependentUpon>CreateUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,6 +289,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Grant_Role.resx">
       <DependentUpon>Grant_Role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\KeToan_NhanSu.resx">
+      <DependentUpon>KeToan_NhanSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\QuanLyTNNS_NhanSu.resx">
+      <DependentUpon>QuanLyTNNS_NhanSu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RevokeRole.resx">
       <DependentUpon>RevokeRole.cs</DependentUpon>

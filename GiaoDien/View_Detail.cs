@@ -182,5 +182,10 @@ namespace GiaoDien
             revokeuser.Message = txtEdit_username.Text;
             revokeuser.ShowDialog();
         }
+
+        private void txtEdit_username_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -34,7 +34,6 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.btn_logout = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.topdashboard_text = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbWelcome = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -64,13 +63,25 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_GioiTinh = new System.Windows.Forms.TextBox();
+            this.txt_NgaySinh = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_CMND = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.txt_NgaySinh = new System.Windows.Forms.TextBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.lb_Nam_CC = new System.Windows.Forms.Label();
+            this.lb_MaNV_CC = new System.Windows.Forms.Label();
+            this.lb_SoNgayCong_CC = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.lb_Thang_CC = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.dgv_ChamCong = new System.Windows.Forms.DataGridView();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -83,6 +94,10 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ChamCong)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox5
@@ -141,27 +156,13 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
-            this.panel2.Controls.Add(this.topdashboard_text);
+            this.panel2.Controls.Add(this.label14);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(242, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1230, 100);
             this.panel2.TabIndex = 3;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // topdashboard_text
-            // 
-            this.topdashboard_text.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
-            this.topdashboard_text.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.topdashboard_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.topdashboard_text.ForeColor = System.Drawing.SystemColors.Window;
-            this.topdashboard_text.Location = new System.Drawing.Point(242, 24);
-            this.topdashboard_text.Name = "topdashboard_text";
-            this.topdashboard_text.Size = new System.Drawing.Size(747, 49);
-            this.topdashboard_text.TabIndex = 1;
-            this.topdashboard_text.Text = "Hospital Centre Management";
-            this.topdashboard_text.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.topdashboard_text.TextChanged += new System.EventHandler(this.topdashboard_text_TextChanged);
             // 
             // panel3
             // 
@@ -490,6 +491,14 @@
             this.txt_GioiTinh.TabIndex = 14;
             this.txt_GioiTinh.TextChanged += new System.EventHandler(this.txt_GioiTinh_TextChanged);
             // 
+            // txt_NgaySinh
+            // 
+            this.txt_NgaySinh.Location = new System.Drawing.Point(689, 25);
+            this.txt_NgaySinh.Name = "txt_NgaySinh";
+            this.txt_NgaySinh.Size = new System.Drawing.Size(157, 34);
+            this.txt_NgaySinh.TabIndex = 8;
+            this.txt_NgaySinh.TextChanged += new System.EventHandler(this.txt_NgaySinh_TextChanged);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -530,12 +539,14 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.panel6);
+            this.tabPage2.Controls.Add(this.panel7);
             this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1123, 535);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Thuốc";
+            this.tabPage2.Text = "Chấm công";
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
@@ -550,13 +561,122 @@
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
-            // txt_NgaySinh
+            // panel6
             // 
-            this.txt_NgaySinh.Location = new System.Drawing.Point(689, 25);
-            this.txt_NgaySinh.Name = "txt_NgaySinh";
-            this.txt_NgaySinh.Size = new System.Drawing.Size(157, 34);
-            this.txt_NgaySinh.TabIndex = 8;
-            this.txt_NgaySinh.TextChanged += new System.EventHandler(this.txt_NgaySinh_TextChanged);
+            this.panel6.Controls.Add(this.lb_Nam_CC);
+            this.panel6.Controls.Add(this.lb_MaNV_CC);
+            this.panel6.Controls.Add(this.lb_SoNgayCong_CC);
+            this.panel6.Controls.Add(this.label13);
+            this.panel6.Controls.Add(this.label15);
+            this.panel6.Controls.Add(this.label12);
+            this.panel6.Controls.Add(this.label16);
+            this.panel6.Controls.Add(this.lb_Thang_CC);
+            this.panel6.Location = new System.Drawing.Point(804, 56);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(286, 305);
+            this.panel6.TabIndex = 32;
+            // 
+            // lb_Nam_CC
+            // 
+            this.lb_Nam_CC.AutoSize = true;
+            this.lb_Nam_CC.Location = new System.Drawing.Point(83, 174);
+            this.lb_Nam_CC.Name = "lb_Nam_CC";
+            this.lb_Nam_CC.Size = new System.Drawing.Size(49, 23);
+            this.lb_Nam_CC.TabIndex = 25;
+            this.lb_Nam_CC.Text = "Năm";
+            // 
+            // lb_MaNV_CC
+            // 
+            this.lb_MaNV_CC.AutoSize = true;
+            this.lb_MaNV_CC.Location = new System.Drawing.Point(139, 25);
+            this.lb_MaNV_CC.Name = "lb_MaNV_CC";
+            this.lb_MaNV_CC.Size = new System.Drawing.Size(122, 23);
+            this.lb_MaNV_CC.TabIndex = 23;
+            this.lb_MaNV_CC.Text = "Mã nhân viên";
+            // 
+            // lb_SoNgayCong_CC
+            // 
+            this.lb_SoNgayCong_CC.AutoSize = true;
+            this.lb_SoNgayCong_CC.Location = new System.Drawing.Point(139, 74);
+            this.lb_SoNgayCong_CC.Name = "lb_SoNgayCong_CC";
+            this.lb_SoNgayCong_CC.Size = new System.Drawing.Size(49, 23);
+            this.lb_SoNgayCong_CC.TabIndex = 27;
+            this.lb_SoNgayCong_CC.Text = "SNC";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(4, 25);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(129, 23);
+            this.label13.TabIndex = 22;
+            this.label13.Text = "Mã nhân viên:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(4, 174);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(56, 23);
+            this.label15.TabIndex = 24;
+            this.label15.Text = "Năm:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(4, 125);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(70, 23);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "Tháng:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(4, 74);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(127, 23);
+            this.label16.TabIndex = 26;
+            this.label16.Text = "Số ngày công:";
+            // 
+            // lb_Thang_CC
+            // 
+            this.lb_Thang_CC.AutoSize = true;
+            this.lb_Thang_CC.Location = new System.Drawing.Point(83, 125);
+            this.lb_Thang_CC.Name = "lb_Thang_CC";
+            this.lb_Thang_CC.Size = new System.Drawing.Size(63, 23);
+            this.lb_Thang_CC.TabIndex = 23;
+            this.lb_Thang_CC.Text = "Tháng";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.dgv_ChamCong);
+            this.panel7.Location = new System.Drawing.Point(28, 56);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(742, 305);
+            this.panel7.TabIndex = 31;
+            // 
+            // dgv_ChamCong
+            // 
+            this.dgv_ChamCong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ChamCong.Location = new System.Drawing.Point(37, 18);
+            this.dgv_ChamCong.Name = "dgv_ChamCong";
+            this.dgv_ChamCong.RowHeadersWidth = 51;
+            this.dgv_ChamCong.RowTemplate.Height = 24;
+            this.dgv_ChamCong.Size = new System.Drawing.Size(683, 259);
+            this.dgv_ChamCong.TabIndex = 0;
+            this.dgv_ChamCong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ChamCong_CellClick);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(291, 25);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(648, 51);
+            this.label14.TabIndex = 46;
+            this.label14.Text = "Hospital Centre Management";
             // 
             // GDBacSi
             // 
@@ -589,6 +709,11 @@
             this.tabPage1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ChamCong)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -599,7 +724,6 @@
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox topdashboard_text;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label label3;
@@ -636,5 +760,17 @@
         private System.Windows.Forms.Label lbVaiTro;
         private System.Windows.Forms.Button btn_Update;
         private System.Windows.Forms.TextBox txt_NgaySinh;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label lb_Nam_CC;
+        private System.Windows.Forms.Label lb_MaNV_CC;
+        private System.Windows.Forms.Label lb_SoNgayCong_CC;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lb_Thang_CC;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.DataGridView dgv_ChamCong;
+        private System.Windows.Forms.Label label14;
     }
 }

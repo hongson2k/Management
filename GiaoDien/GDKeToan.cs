@@ -20,13 +20,23 @@ namespace GiaoDien
         }
         public string username;
         public string password;
+
+        public string Message
+        {
+            get { return username; }
+            set
+            {
+                username = value;
+            }
+        }
         public void displayData_In4()
         {
 
             using (OracleConnection conn = DBConnection.GetConnection(username, password))
             {
                 conn.Open();
-                OracleDataAdapter orcData = new OracleDataAdapter("select * from ADMINBV.NHANVIEN ", conn);
+                OracleDataAdapter orcData = new OracleDataAdapter("select * from ADMINBV.NHANVIEN where MaNhanVien = '" + username +"'", conn);
+                //OracleDataAdapter orcData = new OracleDataAdapter("select * from ADMINBV.NHANVIEN ", conn);
                 DataTable dtbl = new DataTable();
                 orcData.Fill(dtbl);
                 lb_manv.Text = dtbl.Rows[0][0].ToString();
@@ -45,9 +55,32 @@ namespace GiaoDien
             }
         }
 
+        public void displayData_ChamCong()
+        {
+
+            using (OracleConnection conn = DBConnection.GetConnection(username, password))
+            {
+                conn.Open();
+                OracleDataAdapter orcData = new OracleDataAdapter("select * from ADMINBV.CHAMCONG ", conn);
+                DataTable dtbl = new DataTable();
+                orcData.Fill(dtbl);
+                dgv_ChamCong.DataSource = dtbl;
+                dgv_ChamCong.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
+
+                lb_MaNV_CC.Text = dgv_ChamCong.Rows[0].Cells[0].Value.ToString();
+                lb_Thang_CC.Text = dgv_ChamCong.Rows[0].Cells[1].Value.ToString();
+                lb_Nam_CC.Text = dgv_ChamCong.Rows[0].Cells[2].Value.ToString();
+                lb_SoNgayCong_CC.Text = dgv_ChamCong.Rows[0].Cells[3].Value.ToString();
+
+                conn.Close();
+            }
+        }
+
+
         private void GDKeToan_Load(object sender, EventArgs e)
         {
             displayData_In4();
+            displayData_ChamCong();
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -81,6 +114,36 @@ namespace GiaoDien
             {
                 conn.Close();
             }
+        }
+
+        private void dgv_ChamCong_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = dgv_ChamCong.CurrentRow.Index;
+            lb_MaNV_CC.Text = dgv_ChamCong.Rows[i].Cells[0].Value.ToString();
+            lb_Thang_CC.Text = dgv_ChamCong.Rows[i].Cells[1].Value.ToString();
+            lb_Nam_CC.Text = dgv_ChamCong.Rows[i].Cells[2].Value.ToString();
+            lb_SoNgayCong_CC.Text = dgv_ChamCong.Rows[i].Cells[3].Value.ToString();
+        }
+
+        private void btn_ChamCong_Click(object sender, EventArgs e)
+        {
+            
+            GiaoDien.ChamCongCaNhan.ChamCongKeToan CCKeToan = new GiaoDien.ChamCongCaNhan.ChamCongKeToan();
+            CCKeToan.Message = lb_manv.Text;
+            CCKeToan.ShowDialog();
+            
+        }
+
+        private void btn_NhanSu_Click(object sender, EventArgs e)
+        {
+            GiaoDien.NhanSu.KeToan_NhanSu ns = new GiaoDien.NhanSu.KeToan_NhanSu();
+            ns.Message = lb_manv.Text;
+            ns.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

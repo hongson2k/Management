@@ -41,7 +41,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.buttomUsers = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.topdashboard_text = new System.Windows.Forms.TextBox();
             this.MenuCenter = new System.Windows.Forms.Panel();
             this.add_role_btn = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -77,6 +76,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -261,27 +261,13 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
-            this.panel2.Controls.Add(this.topdashboard_text);
+            this.panel2.Controls.Add(this.label12);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1228, 80);
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // topdashboard_text
-            // 
-            this.topdashboard_text.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
-            this.topdashboard_text.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.topdashboard_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.topdashboard_text.ForeColor = System.Drawing.SystemColors.Window;
-            this.topdashboard_text.Location = new System.Drawing.Point(0, 12);
-            this.topdashboard_text.Name = "topdashboard_text";
-            this.topdashboard_text.Size = new System.Drawing.Size(1175, 49);
-            this.topdashboard_text.TabIndex = 0;
-            this.topdashboard_text.Text = "Hospital Centre Management";
-            this.topdashboard_text.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.topdashboard_text.TextChanged += new System.EventHandler(this.topdashboard_text_TextChanged);
             // 
             // MenuCenter
             // 
@@ -715,6 +701,17 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(290, 15);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(648, 51);
+            this.label12.TabIndex = 46;
+            this.label12.Text = "Hospital Centre Management";
+            // 
             // PhanHe1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -778,7 +775,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox topdashboard_text;
         private System.Windows.Forms.Panel MenuCenter;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox1;
@@ -816,5 +812,6 @@
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.Button add_role_btn;
+        private System.Windows.Forms.Label label12;
     }
 }

@@ -50,9 +50,31 @@ namespace GiaoDien
             }
         }
 
+        public void displayData_ChamCong()
+        {
+
+            using (OracleConnection conn = DBConnection.GetConnection(username, password))
+            {
+                conn.Open();
+                OracleDataAdapter orcData = new OracleDataAdapter("select * from ADMINBV.CHAMCONG ", conn);
+                DataTable dtbl = new DataTable();
+                orcData.Fill(dtbl);
+                dgv_ChamCong.DataSource = dtbl;
+                dgv_ChamCong.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
+
+                lb_MaNV_CC.Text = dgv_ChamCong.Rows[0].Cells[0].Value.ToString();
+                lb_Thang_CC.Text = dgv_ChamCong.Rows[0].Cells[1].Value.ToString();
+                lb_Nam_CC.Text = dgv_ChamCong.Rows[0].Cells[2].Value.ToString();
+                lb_SoNgayCong_CC.Text = dgv_ChamCong.Rows[0].Cells[3].Value.ToString();
+
+                conn.Close();
+            }
+        }
+
         private void GDTiepTan_Load(object sender, EventArgs e)
         {
             displayData_In4();
+            displayData_ChamCong();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -86,6 +108,15 @@ namespace GiaoDien
             {
                 conn.Close();
             }
+        }
+
+        private void dgv_ChamCong_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = dgv_ChamCong.CurrentRow.Index;
+            lb_MaNV_CC.Text = dgv_ChamCong.Rows[i].Cells[0].Value.ToString();
+            lb_Thang_CC.Text = dgv_ChamCong.Rows[i].Cells[1].Value.ToString();
+            lb_Nam_CC.Text = dgv_ChamCong.Rows[i].Cells[2].Value.ToString();
+            lb_SoNgayCong_CC.Text = dgv_ChamCong.Rows[i].Cells[3].Value.ToString();
         }
     }
 }

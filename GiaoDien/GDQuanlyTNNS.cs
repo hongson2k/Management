@@ -21,9 +21,18 @@ namespace GiaoDien
 
         public string username;
         public string password;
+
+        public string Message
+        {
+            get { return username; }
+            set
+            {
+                username = value;
+            }
+        }
+
         public void displayData_In4()
         {
-
             using (OracleConnection conn = DBConnection.GetConnection(username, password))
             {
                 conn.Open();
@@ -45,6 +54,28 @@ namespace GiaoDien
                 conn.Close();
             }
         }
+
+        public void displayData_ChamCong()
+        {
+
+            using (OracleConnection conn = DBConnection.GetConnection(username, password))
+            {
+                conn.Open();
+                OracleDataAdapter orcData = new OracleDataAdapter("select * from ADMINBV.CHAMCONG ", conn);
+                DataTable dtbl = new DataTable();
+                orcData.Fill(dtbl);
+                dgv_ChamCong.DataSource = dtbl;
+                dgv_ChamCong.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
+
+                txt_MaNhanVien.Text = dgv_ChamCong.Rows[0].Cells[0].Value.ToString();
+                txtThang.Text = dgv_ChamCong.Rows[0].Cells[1].Value.ToString();
+                txtNam.Text = dgv_ChamCong.Rows[0].Cells[2].Value.ToString();
+                txt_SoNgayCong.Text = dgv_ChamCong.Rows[0].Cells[3].Value.ToString();
+
+                conn.Close();
+            }
+        }
+
 
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -83,6 +114,132 @@ namespace GiaoDien
         private void GDQuanlyTNNS_Load(object sender, EventArgs e)
         {
             displayData_In4();
+            displayData_ChamCong();
+        }
+
+        private void dgv_ChamCong_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = dgv_ChamCong.CurrentRow.Index;
+            txt_MaNhanVien.Text = dgv_ChamCong.Rows[i].Cells[0].Value.ToString();
+            txtThang.Text = dgv_ChamCong.Rows[i].Cells[1].Value.ToString();
+            txtNam.Text = dgv_ChamCong.Rows[i].Cells[2].Value.ToString();
+            txt_SoNgayCong.Text = dgv_ChamCong.Rows[i].Cells[3].Value.ToString();
+        }
+
+        private void btn_ChamCong_Click(object sender, EventArgs e)
+        {
+            GiaoDien.ChamCongCaNhan.ChamCongQLTNNS CCQLTNNS = new GiaoDien.ChamCongCaNhan.ChamCongQLTNNS();
+            CCQLTNNS.Message = lb_manv.Text;
+            CCQLTNNS.ShowDialog();
+        }
+
+        private void btn_QLNhanVien_Click(object sender, EventArgs e)
+        {
+            GiaoDien.NhanSu.QuanLyTNNS_NhanSu ns = new GiaoDien.NhanSu.QuanLyTNNS_NhanSu();
+            ns.Message = lb_manv.Text;
+            ns.ShowDialog();
+        }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+            using (OracleConnection conn = DBConnection.GetConnection(username, password))
+            {
+                try
+                {
+                    conn.Open();
+                    string sql = "Insert into ADMINBV.CHAMCONG( MaNhanVien , Thang , Nam , SoNgayCong) "
+                                                         + " values( '" + txt_MaNhanVien.Text + "' , '"
+                                                         + txtThang.Text + "' , '"
+                                                         + txtNam.Text + "' , '"
+                                                         + txt_SoNgayCong.Text + "')";
+
+
+                    OracleCommand cmd = new OracleCommand(sql, conn);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Thêm thành công");
+                    displayData_ChamCong();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            using (OracleConnection conn = DBConnection.GetConnection(username, password))
+            {
+                try
+                {
+                    conn.Open();
+                    string sql = " DELETE FROM ADMINBV.CHAMCONG WHERE MaNhanVien = '" + txt_MaNhanVien.Text + "' and Thang = " + txtThang.Text + " and Nam = "+ txtNam.Text;
+
+                    OracleCommand cmd = new OracleCommand(sql, conn);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Xóa thành công");
+                    displayData_ChamCong();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+        private void btn_Update_ChamCong_Click(object sender, EventArgs e)
+        {
+            using (OracleConnection conn = DBConnection.GetConnection(username, password))
+            {
+                try
+                {
+                    conn.Open();
+                    
+                    string sql = " Update ADMINBV.CHAMCONG SET SoNgayCong = "
+                        + txt_SoNgayCong.Text
+                        + "  where MaNhanVien = '" + txt_MaNhanVien.Text + "' and Thang = " + txtThang.Text + " and Nam = " + txtNam.Text;
+
+                    OracleCommand cmd = new OracleCommand(sql, conn);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.ExecuteNonQuery();
+                    displayData_ChamCong();
+                    
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
         }
     }
 }

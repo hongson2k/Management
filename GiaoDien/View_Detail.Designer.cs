@@ -290,6 +290,7 @@
             this.txtEdit_username.Name = "txtEdit_username";
             this.txtEdit_username.Size = new System.Drawing.Size(193, 25);
             this.txtEdit_username.TabIndex = 1;
+            this.txtEdit_username.TextChanged += new System.EventHandler(this.txtEdit_username_TextChanged);
             // 
             // lb_username_add
             // 
@@ -336,7 +337,7 @@
             this.tabPage1.Controls.Add(this.dgvRole);
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(746, 419);
+            this.tabPage1.Size = new System.Drawing.Size(814, 491);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Role";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -356,7 +357,7 @@
             this.tabPage2.Controls.Add(this.dgvSys);
             this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(746, 419);
+            this.tabPage2.Size = new System.Drawing.Size(814, 491);
             this.tabPage2.TabIndex = 0;
             this.tabPage2.Text = "System Privileges";
             this.tabPage2.UseVisualStyleBackColor = true;

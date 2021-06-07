@@ -30,11 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GDTaiVu));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.topdashboard_text = new System.Windows.Forms.TextBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbName = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -71,10 +70,22 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.lb_Nam_CC = new System.Windows.Forms.Label();
+            this.lb_MaNV_CC = new System.Windows.Forms.Label();
+            this.lb_SoNgayCong_CC = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.lb_Thang_CC = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.dgv_ChamCong = new System.Windows.Forms.DataGridView();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panel4.SuspendLayout();
@@ -83,6 +94,10 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ChamCong)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -96,27 +111,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(246, 804);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
-            this.panel2.Controls.Add(this.topdashboard_text);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(246, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1226, 100);
-            this.panel2.TabIndex = 1;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(3, 0);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(242, 187);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 3;
-            this.pictureBox5.TabStop = false;
             // 
             // pictureBox11
             // 
@@ -145,18 +139,26 @@
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
-            // topdashboard_text
+            // pictureBox5
             // 
-            this.topdashboard_text.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
-            this.topdashboard_text.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.topdashboard_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.topdashboard_text.ForeColor = System.Drawing.SystemColors.Window;
-            this.topdashboard_text.Location = new System.Drawing.Point(240, 26);
-            this.topdashboard_text.Name = "topdashboard_text";
-            this.topdashboard_text.Size = new System.Drawing.Size(747, 49);
-            this.topdashboard_text.TabIndex = 3;
-            this.topdashboard_text.Text = "Hospital Centre Management";
-            this.topdashboard_text.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(242, 187);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 3;
+            this.pictureBox5.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(246, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1226, 100);
+            this.panel2.TabIndex = 1;
             // 
             // panel3
             // 
@@ -500,12 +502,14 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.panel6);
+            this.tabPage2.Controls.Add(this.panel7);
             this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1123, 535);
+            this.tabPage2.Size = new System.Drawing.Size(1130, 535);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Thuốc";
+            this.tabPage2.Text = "Chấm công";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage3
@@ -513,10 +517,127 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 32);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1123, 535);
+            this.tabPage3.Size = new System.Drawing.Size(1130, 535);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Dịch vụ";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.lb_Nam_CC);
+            this.panel6.Controls.Add(this.lb_MaNV_CC);
+            this.panel6.Controls.Add(this.lb_SoNgayCong_CC);
+            this.panel6.Controls.Add(this.label13);
+            this.panel6.Controls.Add(this.label15);
+            this.panel6.Controls.Add(this.label12);
+            this.panel6.Controls.Add(this.label16);
+            this.panel6.Controls.Add(this.lb_Thang_CC);
+            this.panel6.Location = new System.Drawing.Point(806, 46);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(286, 305);
+            this.panel6.TabIndex = 30;
+            // 
+            // lb_Nam_CC
+            // 
+            this.lb_Nam_CC.AutoSize = true;
+            this.lb_Nam_CC.Location = new System.Drawing.Point(83, 174);
+            this.lb_Nam_CC.Name = "lb_Nam_CC";
+            this.lb_Nam_CC.Size = new System.Drawing.Size(49, 23);
+            this.lb_Nam_CC.TabIndex = 25;
+            this.lb_Nam_CC.Text = "Năm";
+            // 
+            // lb_MaNV_CC
+            // 
+            this.lb_MaNV_CC.AutoSize = true;
+            this.lb_MaNV_CC.Location = new System.Drawing.Point(139, 25);
+            this.lb_MaNV_CC.Name = "lb_MaNV_CC";
+            this.lb_MaNV_CC.Size = new System.Drawing.Size(122, 23);
+            this.lb_MaNV_CC.TabIndex = 23;
+            this.lb_MaNV_CC.Text = "Mã nhân viên";
+            // 
+            // lb_SoNgayCong_CC
+            // 
+            this.lb_SoNgayCong_CC.AutoSize = true;
+            this.lb_SoNgayCong_CC.Location = new System.Drawing.Point(139, 74);
+            this.lb_SoNgayCong_CC.Name = "lb_SoNgayCong_CC";
+            this.lb_SoNgayCong_CC.Size = new System.Drawing.Size(49, 23);
+            this.lb_SoNgayCong_CC.TabIndex = 27;
+            this.lb_SoNgayCong_CC.Text = "SNC";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(4, 25);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(129, 23);
+            this.label13.TabIndex = 22;
+            this.label13.Text = "Mã nhân viên:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(4, 174);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(56, 23);
+            this.label15.TabIndex = 24;
+            this.label15.Text = "Năm:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(4, 125);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(70, 23);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "Tháng:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(4, 74);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(127, 23);
+            this.label16.TabIndex = 26;
+            this.label16.Text = "Số ngày công:";
+            // 
+            // lb_Thang_CC
+            // 
+            this.lb_Thang_CC.AutoSize = true;
+            this.lb_Thang_CC.Location = new System.Drawing.Point(83, 125);
+            this.lb_Thang_CC.Name = "lb_Thang_CC";
+            this.lb_Thang_CC.Size = new System.Drawing.Size(63, 23);
+            this.lb_Thang_CC.TabIndex = 23;
+            this.lb_Thang_CC.Text = "Tháng";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.dgv_ChamCong);
+            this.panel7.Location = new System.Drawing.Point(30, 46);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(742, 305);
+            this.panel7.TabIndex = 29;
+            // 
+            // dgv_ChamCong
+            // 
+            this.dgv_ChamCong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ChamCong.Location = new System.Drawing.Point(37, 18);
+            this.dgv_ChamCong.Name = "dgv_ChamCong";
+            this.dgv_ChamCong.RowHeadersWidth = 51;
+            this.dgv_ChamCong.RowTemplate.Height = 24;
+            this.dgv_ChamCong.Size = new System.Drawing.Size(683, 259);
+            this.dgv_ChamCong.TabIndex = 0;
+            this.dgv_ChamCong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ChamCong_CellClick);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(289, 25);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(648, 51);
+            this.label14.TabIndex = 46;
+            this.label14.Text = "Hospital Centre Management";
             // 
             // GDTaiVu
             // 
@@ -534,10 +655,10 @@
             this.Text = "GDTaiVu";
             this.Load += new System.EventHandler(this.GDTaiVu_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -549,6 +670,11 @@
             this.tabPage1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ChamCong)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -560,7 +686,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Button btnLogOut;
-        private System.Windows.Forms.TextBox topdashboard_text;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Label label5;
@@ -597,5 +722,17 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label lb_Nam_CC;
+        private System.Windows.Forms.Label lb_MaNV_CC;
+        private System.Windows.Forms.Label lb_SoNgayCong_CC;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lb_Thang_CC;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.DataGridView dgv_ChamCong;
+        private System.Windows.Forms.Label label14;
     }
 }

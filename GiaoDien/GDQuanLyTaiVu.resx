@@ -145,6 +145,17 @@
         TkSuQmCC
 </value>
   </data>
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAUtJREFUSEvd
+        lTFuwkAURC0QdaRUpKLiOCmIxDlQmnAGuARFuEZukPQoyQ3SkRRBQjIz/LG9Wf+1sRQKeNJIqz/z19bu
+        ep1dN3meD6Ap9Ay9Q98Sx6zRGyjeDTROoA+oDWYmamsH4R60YGdH2NPTNGkQWh7jf9lBc2goccxazFLT
+        +CDAZfF4UqSENbNq+MsFgxuaWvM7xUpYM6sG56hvPIo8ESm6PIBMFatAcW2eS5clImvFKlDcmOdy6iYX
+        bDRtBYpb8/6FraatYNG8Rr6gHxs24j7AW6JfaAU9QDeKMnurGj1mYtwlijf5FRrJTsIM9MaGAHeT42M6
+        ltUKs9ZS4h7T+EN7lNUKs9ZyxP/QCIzwqthDM1lJmFG2oPlmRSC+7F6ge6ivCDN91eiFNF92BKHUdc23
+        /JTCNy447bouQPg8P5wQNJ7vl3khZNkBQ6RCAt7Z2GoAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="pictureBox11.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAVtJREFUaEPt
