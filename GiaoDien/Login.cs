@@ -138,7 +138,7 @@ namespace GiaoDien
                     gd.Close();
                 }
 
-                if (username == "ADQLBV")
+                if (username == "ADMINBV" && password == "123")
                 {
                     this.Hide();
                     PhanHe1 phanhe1 = new PhanHe1();
@@ -152,7 +152,7 @@ namespace GiaoDien
             }
             catch
             {
-                this.Alert("Login Failed", Form_Alert.enmType.Failed);
+                MessageBox.Show("Login failed\n", "Thông báo", MessageBoxButtons.OK);
             }
         }
         private void pictureBox1_Click(object sender, EventArgs e)

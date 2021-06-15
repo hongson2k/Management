@@ -56,9 +56,7 @@ namespace GiaoDien
                 lb_Luong.Text = dtbl.Rows[0][5].ToString();
                 txt_GioiTinh.Text = dtbl.Rows[0][6].ToString();
                 lb_PhuCap.Text = dtbl.Rows[0][7].ToString();
-                
-                lbVaiTro.Text = dtbl.Rows[0][8].ToString();
-                lbDonVi.Text = dtbl.Rows[0][9].ToString();
+                lbDonVi.Text = dtbl.Rows[0][8].ToString();
 
                 lbWelcome.Text = dtbl.Rows[0][1].ToString();
                 conn.Close();
@@ -349,6 +347,32 @@ namespace GiaoDien
             lb_Thang_CC.Text = dgv_ChamCong.Rows[i].Cells[1].Value.ToString();
             lb_Nam_CC.Text = dgv_ChamCong.Rows[i].Cells[2].Value.ToString();
             lb_SoNgayCong_CC.Text = dgv_ChamCong.Rows[i].Cells[3].Value.ToString();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_HoSoBA_Click(object sender, EventArgs e)
+        {
+            GiaoDien.HoSoBenhAn.BacSi_HoSoBenhAn hsba = new GiaoDien.HoSoBenhAn.BacSi_HoSoBenhAn();
+            hsba.Message = lb_manv.Text;
+            hsba.ShowDialog();
+        }
+
+        private void btn_HoSoDichVu_Click(object sender, EventArgs e)
+        {
+            GiaoDien.HoSoDichVu.BacSi_HS_DichVu hsdv = new GiaoDien.HoSoDichVu.BacSi_HS_DichVu();
+            hsdv.Message = lb_manv.Text;
+            hsdv.ShowDialog();
+        }
+
+        private void btn_DichVu_Click(object sender, EventArgs e)
+        {
+            GiaoDien.DichVu.DichVu_View_BS_KTV dv = new GiaoDien.DichVu.DichVu_View_BS_KTV();
+            dv.Message = lb_manv.Text;
+            dv.ShowDialog();
         }
     }
 }

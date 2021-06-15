@@ -54,9 +54,7 @@ namespace GiaoDien.NhanSu
                 lb_Luong.Text = dgv_NhanSu.Rows[0].Cells[5].Value.ToString();
                 txt_GioiTinh.Text = dgv_NhanSu.Rows[0].Cells[6].Value.ToString();
                 lb_PhuCap.Text = dgv_NhanSu.Rows[0].Cells[7].Value.ToString();
-
-                lbVaiTro.Text = dgv_NhanSu.Rows[0].Cells[8].Value.ToString();
-                lbDonVi.Text = dgv_NhanSu.Rows[0].Cells[9].Value.ToString();
+                lbDonVi.Text = dgv_NhanSu.Rows[0].Cells[8].Value.ToString();
                
                 
                 conn.Close();
@@ -79,8 +77,7 @@ namespace GiaoDien.NhanSu
             lb_Luong.Text = dgv_NhanSu.Rows[i].Cells[5].Value.ToString();
             txt_GioiTinh.Text = dgv_NhanSu.Rows[i].Cells[6].Value.ToString();
             lb_PhuCap.Text = dgv_NhanSu.Rows[i].Cells[7].Value.ToString();
-            lbVaiTro.Text = dgv_NhanSu.Rows[i].Cells[8].Value.ToString();
-            lbDonVi.Text = dgv_NhanSu.Rows[i].Cells[9].Value.ToString();
+            lbDonVi.Text = dgv_NhanSu.Rows[i].Cells[8].Value.ToString();
         }
     }
 }

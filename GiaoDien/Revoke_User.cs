@@ -20,7 +20,7 @@ namespace GiaoDien
 
         }
         string strTemp;
-        string connectionString = "USER ID = CARSON;Password=123;DATA SOURCE = localhost:1521/xe;";
+        string connectionString = "USER ID = ADMINBV;Password=123;DATA SOURCE = localhost:1521/xe;";
 
         public string Message
         {
@@ -95,7 +95,7 @@ namespace GiaoDien
         private void buttonApply_Click(object sender, EventArgs e)
         {
             string sql;
-            OracleConnection con = new OracleConnection("USER ID = CARSON;Password=123;DATA SOURCE = localhost:1521/xe;");//Kết nối chuỗi dữ liệu
+            OracleConnection con = new OracleConnection("USER ID = ADMINBV;Password=123;DATA SOURCE = localhost:1521/xe;");//Kết nối chuỗi dữ liệu
             con.Open();//Mở chuỗi kết nối
             OracleCommand command = new OracleCommand();
             command.Connection = con;

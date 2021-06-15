@@ -14,7 +14,7 @@ namespace GiaoDien
 {
     public partial class View_Detail_Role : Form
     {
-        string connectionString = "USER ID = CARSON;Password=123;DATA SOURCE = localhost:1521/xe;";
+        string connectionString = "USER ID = ADMINBV;Password=123;DATA SOURCE = localhost:1521/xe;";
         string strTemp;
         
         public View_Detail_Role()

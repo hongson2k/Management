@@ -49,8 +49,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_TenNhanVien = new System.Windows.Forms.TextBox();
-            this.lbVaiTro = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_DiaChi = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -129,9 +127,9 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
             this.label3.Location = new System.Drawing.Point(718, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(328, 39);
+            this.label3.Size = new System.Drawing.Size(355, 38);
             this.label3.TabIndex = 17;
-            this.label3.Text = "NHÂN SỰ CÔNG TY";
+            this.label3.Text = "NHÂN SỰ BỆNH VIỆN";
             // 
             // panel4
             // 
@@ -178,7 +176,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(280, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(648, 51);
+            this.label1.Size = new System.Drawing.Size(638, 49);
             this.label1.TabIndex = 46;
             this.label1.Text = "Hospital Centre Management";
             // 
@@ -192,8 +190,6 @@
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.txt_TenNhanVien);
-            this.panel5.Controls.Add(this.lbVaiTro);
-            this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.txt_DiaChi);
             this.panel5.Controls.Add(this.label9);
@@ -279,24 +275,6 @@
             this.txt_TenNhanVien.Name = "txt_TenNhanVien";
             this.txt_TenNhanVien.Size = new System.Drawing.Size(260, 30);
             this.txt_TenNhanVien.TabIndex = 4;
-            // 
-            // lbVaiTro
-            // 
-            this.lbVaiTro.AutoSize = true;
-            this.lbVaiTro.Location = new System.Drawing.Point(165, 300);
-            this.lbVaiTro.Name = "lbVaiTro";
-            this.lbVaiTro.Size = new System.Drawing.Size(67, 23);
-            this.lbVaiTro.TabIndex = 17;
-            this.lbVaiTro.Text = "Vai trò";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 300);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 23);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "Vai trò";
             // 
             // label4
             // 
@@ -430,8 +408,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_TenNhanVien;
-        private System.Windows.Forms.Label lbVaiTro;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_DiaChi;
         private System.Windows.Forms.Label label9;

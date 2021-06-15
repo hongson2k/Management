@@ -43,12 +43,15 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_TenNhanVien = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_DiaChi = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_GioiTinh = new System.Windows.Forms.TextBox();
+            this.txt_manv = new System.Windows.Forms.TextBox();
+            this.txt_DonVi = new System.Windows.Forms.TextBox();
+            this.txt_PhuCap = new System.Windows.Forms.TextBox();
+            this.txt_Luong = new System.Windows.Forms.TextBox();
             this.txt_NgaySinh = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -56,11 +59,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgv_NhanSu = new System.Windows.Forms.DataGridView();
-            this.txt_manv = new System.Windows.Forms.TextBox();
-            this.txt_Luong = new System.Windows.Forms.TextBox();
-            this.txt_PhuCap = new System.Windows.Forms.TextBox();
-            this.txt_VaiTro = new System.Windows.Forms.TextBox();
-            this.txt_DonVi = new System.Windows.Forms.TextBox();
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_Update = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
@@ -115,9 +113,9 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
             this.label3.Location = new System.Drawing.Point(718, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(328, 39);
+            this.label3.Size = new System.Drawing.Size(355, 38);
             this.label3.TabIndex = 17;
-            this.label3.Text = "NHÂN SỰ CÔNG TY";
+            this.label3.Text = "NHÂN SỰ BỆNH VIỆN";
             // 
             // panel4
             // 
@@ -164,7 +162,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(280, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(648, 51);
+            this.label1.Size = new System.Drawing.Size(638, 49);
             this.label1.TabIndex = 46;
             this.label1.Text = "Hospital Centre Management";
             // 
@@ -174,14 +172,12 @@
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.txt_TenNhanVien);
-            this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.txt_DiaChi);
             this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.txt_GioiTinh);
             this.panel5.Controls.Add(this.txt_manv);
-            this.panel5.Controls.Add(this.txt_VaiTro);
             this.panel5.Controls.Add(this.txt_DonVi);
             this.panel5.Controls.Add(this.txt_PhuCap);
             this.panel5.Controls.Add(this.txt_Luong);
@@ -230,15 +226,6 @@
             this.txt_TenNhanVien.Size = new System.Drawing.Size(260, 30);
             this.txt_TenNhanVien.TabIndex = 4;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 300);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 23);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "Vai trò";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -279,6 +266,34 @@
             this.txt_GioiTinh.Name = "txt_GioiTinh";
             this.txt_GioiTinh.Size = new System.Drawing.Size(199, 30);
             this.txt_GioiTinh.TabIndex = 14;
+            // 
+            // txt_manv
+            // 
+            this.txt_manv.Location = new System.Drawing.Point(169, 31);
+            this.txt_manv.Name = "txt_manv";
+            this.txt_manv.Size = new System.Drawing.Size(157, 30);
+            this.txt_manv.TabIndex = 8;
+            // 
+            // txt_DonVi
+            // 
+            this.txt_DonVi.Location = new System.Drawing.Point(689, 296);
+            this.txt_DonVi.Name = "txt_DonVi";
+            this.txt_DonVi.Size = new System.Drawing.Size(157, 30);
+            this.txt_DonVi.TabIndex = 8;
+            // 
+            // txt_PhuCap
+            // 
+            this.txt_PhuCap.Location = new System.Drawing.Point(689, 221);
+            this.txt_PhuCap.Name = "txt_PhuCap";
+            this.txt_PhuCap.Size = new System.Drawing.Size(157, 30);
+            this.txt_PhuCap.TabIndex = 8;
+            // 
+            // txt_Luong
+            // 
+            this.txt_Luong.Location = new System.Drawing.Point(689, 155);
+            this.txt_Luong.Name = "txt_Luong";
+            this.txt_Luong.Size = new System.Drawing.Size(157, 30);
+            this.txt_Luong.TabIndex = 8;
             // 
             // txt_NgaySinh
             // 
@@ -324,6 +339,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.dgv_NhanSu);
+            this.panel1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(27, 165);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1290, 271);
@@ -339,41 +355,6 @@
             this.dgv_NhanSu.Size = new System.Drawing.Size(1150, 234);
             this.dgv_NhanSu.TabIndex = 0;
             this.dgv_NhanSu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_NhanSu_CellClick);
-            // 
-            // txt_manv
-            // 
-            this.txt_manv.Location = new System.Drawing.Point(169, 31);
-            this.txt_manv.Name = "txt_manv";
-            this.txt_manv.Size = new System.Drawing.Size(157, 30);
-            this.txt_manv.TabIndex = 8;
-            // 
-            // txt_Luong
-            // 
-            this.txt_Luong.Location = new System.Drawing.Point(689, 155);
-            this.txt_Luong.Name = "txt_Luong";
-            this.txt_Luong.Size = new System.Drawing.Size(157, 30);
-            this.txt_Luong.TabIndex = 8;
-            // 
-            // txt_PhuCap
-            // 
-            this.txt_PhuCap.Location = new System.Drawing.Point(689, 221);
-            this.txt_PhuCap.Name = "txt_PhuCap";
-            this.txt_PhuCap.Size = new System.Drawing.Size(157, 30);
-            this.txt_PhuCap.TabIndex = 8;
-            // 
-            // txt_VaiTro
-            // 
-            this.txt_VaiTro.Location = new System.Drawing.Point(168, 293);
-            this.txt_VaiTro.Name = "txt_VaiTro";
-            this.txt_VaiTro.Size = new System.Drawing.Size(157, 30);
-            this.txt_VaiTro.TabIndex = 8;
-            // 
-            // txt_DonVi
-            // 
-            this.txt_DonVi.Location = new System.Drawing.Point(689, 296);
-            this.txt_DonVi.Name = "txt_DonVi";
-            this.txt_DonVi.Size = new System.Drawing.Size(157, 30);
-            this.txt_DonVi.TabIndex = 8;
             // 
             // btn_Add
             // 
@@ -438,6 +419,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(315, 383);
             this.panel6.TabIndex = 48;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // QuanLyTNNS_NhanSu
             // 
@@ -485,14 +467,12 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_TenNhanVien;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_DiaChi;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_GioiTinh;
         private System.Windows.Forms.TextBox txt_manv;
-        private System.Windows.Forms.TextBox txt_VaiTro;
         private System.Windows.Forms.TextBox txt_DonVi;
         private System.Windows.Forms.TextBox txt_PhuCap;
         private System.Windows.Forms.TextBox txt_Luong;

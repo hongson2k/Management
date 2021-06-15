@@ -47,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BenhNhan\BenhNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BenhNhan\BenhNhan.Designer.cs">
+      <DependentUpon>BenhNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BenhNhan\TiepTan_BenhNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BenhNhan\TiepTan_BenhNhan.Designer.cs">
+      <DependentUpon>TiepTan_BenhNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChamCongCaNhan\ChamCongKeToan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +94,36 @@
     </Compile>
     <Compile Include="CreateRoles.designer.cs">
       <DependentUpon>CreateRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DichVu\DichVu_Edit_QLTaiVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DichVu\DichVu_Edit_QLTaiVu.Designer.cs">
+      <DependentUpon>DichVu_Edit_QLTaiVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DichVu\DichVu_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DichVu\DichVu_View.Designer.cs">
+      <DependentUpon>DichVu_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DichVu\DichVu_View_BS_KTV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DichVu\DichVu_View_BS_KTV.Designer.cs">
+      <DependentUpon>DichVu_View_BS_KTV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DonVi\DonVi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DonVi\DonVi.Designer.cs">
+      <DependentUpon>DonVi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DonVi\QuanLyDonVi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DonVi\QuanLyDonVi.Designer.cs">
+      <DependentUpon>QuanLyDonVi.cs</DependentUpon>
     </Compile>
     <Compile Include="Drop_Role.cs">
       <SubType>Form</SubType>
@@ -167,6 +209,42 @@
     <Compile Include="Grant_Role.designer.cs">
       <DependentUpon>Grant_Role.cs</DependentUpon>
     </Compile>
+    <Compile Include="HoSoBenhAn\BacSi_HoSoBenhAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoSoBenhAn\BacSi_HoSoBenhAn.Designer.cs">
+      <DependentUpon>BacSi_HoSoBenhAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoSoBenhAn\HoSoBA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoSoBenhAn\HoSoBA.Designer.cs">
+      <DependentUpon>HoSoBA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoSoBenhAn\TiepTan_HoSoBenhAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoSoBenhAn\TiepTan_HoSoBenhAn.Designer.cs">
+      <DependentUpon>TiepTan_HoSoBenhAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoSoDichVu\BacSi_HS_DichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoSoDichVu\BacSi_HS_DichVu.Designer.cs">
+      <DependentUpon>BacSi_HS_DichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoSoDichVu\HS_DichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoSoDichVu\HS_DichVu.Designer.cs">
+      <DependentUpon>HS_DichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoSoDichVu\TiepTan_HS_DichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoSoDichVu\TiepTan_HS_DichVu.Designer.cs">
+      <DependentUpon>TiepTan_HS_DichVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="KetNoi.cs" />
     <Compile Include="NhanSu\KeToan_NhanSu.cs">
       <SubType>Form</SubType>
@@ -191,6 +269,12 @@
     </Compile>
     <Compile Include="Revoke_User.Designer.cs">
       <DependentUpon>Revoke_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Table.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Table.Designer.cs">
+      <DependentUpon>Table.cs</DependentUpon>
     </Compile>
     <Compile Include="View_Detail.cs">
       <SubType>Form</SubType>
@@ -230,6 +314,12 @@
     <Compile Include="View_Detail_Role.designer.cs">
       <DependentUpon>View_Detail_Role.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BenhNhan\BenhNhan.resx">
+      <DependentUpon>BenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BenhNhan\TiepTan_BenhNhan.resx">
+      <DependentUpon>TiepTan_BenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChamCongCaNhan\ChamCongKeToan.resx">
       <DependentUpon>ChamCongKeToan.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,6 +337,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreateRoles.resx">
       <DependentUpon>CreateRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DichVu\DichVu_Edit_QLTaiVu.resx">
+      <DependentUpon>DichVu_Edit_QLTaiVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DichVu\DichVu_View.resx">
+      <DependentUpon>DichVu_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DichVu\DichVu_View_BS_KTV.resx">
+      <DependentUpon>DichVu_View_BS_KTV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DonVi\DonVi.resx">
+      <DependentUpon>DonVi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DonVi\QuanLyDonVi.resx">
+      <DependentUpon>QuanLyDonVi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Drop_Role.resx">
       <DependentUpon>Drop_Role.cs</DependentUpon>
@@ -290,6 +395,24 @@
     <EmbeddedResource Include="Grant_Role.resx">
       <DependentUpon>Grant_Role.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HoSoBenhAn\BacSi_HoSoBenhAn.resx">
+      <DependentUpon>BacSi_HoSoBenhAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoSoBenhAn\HoSoBA.resx">
+      <DependentUpon>HoSoBA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoSoBenhAn\TiepTan_HoSoBenhAn.resx">
+      <DependentUpon>TiepTan_HoSoBenhAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoSoDichVu\BacSi_HS_DichVu.resx">
+      <DependentUpon>BacSi_HS_DichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoSoDichVu\HS_DichVu.resx">
+      <DependentUpon>HS_DichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoSoDichVu\TiepTan_HS_DichVu.resx">
+      <DependentUpon>TiepTan_HS_DichVu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NhanSu\KeToan_NhanSu.resx">
       <DependentUpon>KeToan_NhanSu.cs</DependentUpon>
     </EmbeddedResource>
@@ -301,6 +424,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Revoke_User.resx">
       <DependentUpon>Revoke_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Table.resx">
+      <DependentUpon>Table.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View_Detail.resx">
       <DependentUpon>View_Detail.cs</DependentUpon>
@@ -319,6 +445,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Role.resx">
       <DependentUpon>Role.cs</DependentUpon>
@@ -344,6 +471,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_dialpad_white_24dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

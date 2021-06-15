@@ -30,10 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GDKyThuatVien));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.btn_DichVu = new System.Windows.Forms.Button();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbName = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -56,8 +59,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_TenNhanVien = new System.Windows.Forms.TextBox();
-            this.lbVaiTro = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_DiaChi = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -69,7 +70,6 @@
             this.txt_CMND = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lb_Nam_CC = new System.Windows.Forms.Label();
             this.lb_MaNV_CC = new System.Windows.Forms.Label();
@@ -81,8 +81,8 @@
             this.lb_Thang_CC = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.dgv_ChamCong = new System.Windows.Forms.DataGridView();
-            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel2.SuspendLayout();
@@ -103,6 +103,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.panel1.Controls.Add(this.pictureBox7);
+            this.panel1.Controls.Add(this.btn_DichVu);
             this.panel1.Controls.Add(this.pictureBox11);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.btnLogOut);
@@ -112,11 +114,38 @@
             this.panel1.Size = new System.Drawing.Size(246, 804);
             this.panel1.TabIndex = 2;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(6, 193);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(44, 46);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 60;
+            this.pictureBox7.TabStop = false;
+            // 
+            // btn_DichVu
+            // 
+            this.btn_DichVu.FlatAppearance.BorderSize = 0;
+            this.btn_DichVu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btn_DichVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DichVu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DichVu.ForeColor = System.Drawing.Color.White;
+            this.btn_DichVu.Location = new System.Drawing.Point(56, 193);
+            this.btn_DichVu.Name = "btn_DichVu";
+            this.btn_DichVu.Size = new System.Drawing.Size(187, 46);
+            this.btn_DichVu.TabIndex = 59;
+            this.btn_DichVu.Text = "Dịch Vụ";
+            this.btn_DichVu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_DichVu.UseVisualStyleBackColor = true;
+            this.btn_DichVu.Click += new System.EventHandler(this.btn_DichVu_Click);
+            // 
             // pictureBox11
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(5, 193);
+            this.pictureBox11.Location = new System.Drawing.Point(8, 253);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(45, 41);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -139,9 +168,9 @@
             this.btnLogOut.FlatAppearance.BorderSize = 0;
             this.btnLogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.btnLogOut.ForeColor = System.Drawing.Color.White;
-            this.btnLogOut.Location = new System.Drawing.Point(56, 193);
+            this.btnLogOut.Location = new System.Drawing.Point(59, 253);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(184, 46);
             this.btnLogOut.TabIndex = 35;
@@ -159,6 +188,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1226, 100);
             this.panel2.TabIndex = 4;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(289, 25);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(638, 49);
+            this.label14.TabIndex = 46;
+            this.label14.Text = "Hospital Centre Management";
             // 
             // panel3
             // 
@@ -267,7 +307,6 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(264, 221);
             this.tabControl1.Name = "tabControl1";
@@ -313,8 +352,6 @@
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.txt_TenNhanVien);
-            this.panel5.Controls.Add(this.lbVaiTro);
-            this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.txt_DiaChi);
             this.panel5.Controls.Add(this.label9);
@@ -399,24 +436,6 @@
             this.txt_TenNhanVien.Name = "txt_TenNhanVien";
             this.txt_TenNhanVien.Size = new System.Drawing.Size(260, 34);
             this.txt_TenNhanVien.TabIndex = 4;
-            // 
-            // lbVaiTro
-            // 
-            this.lbVaiTro.AutoSize = true;
-            this.lbVaiTro.Location = new System.Drawing.Point(165, 300);
-            this.lbVaiTro.Name = "lbVaiTro";
-            this.lbVaiTro.Size = new System.Drawing.Size(75, 27);
-            this.lbVaiTro.TabIndex = 17;
-            this.lbVaiTro.Text = "Vai trò";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 300);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(75, 27);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "Vai trò";
             // 
             // label2
             // 
@@ -511,16 +530,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Chấm công";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 32);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1130, 535);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Dịch vụ";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // panel6
             // 
@@ -628,17 +637,6 @@
             this.dgv_ChamCong.TabIndex = 0;
             this.dgv_ChamCong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ChamCong_CellClick);
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(289, 25);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(648, 51);
-            this.label14.TabIndex = 46;
-            this.label14.Text = "Hospital Centre Management";
-            // 
             // GDKyThuatVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -654,6 +652,7 @@
             this.Text = "GDKyThuatVien";
             this.Load += new System.EventHandler(this.GDKyThuatVien_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -707,8 +706,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_TenNhanVien;
-        private System.Windows.Forms.Label lbVaiTro;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_DiaChi;
         private System.Windows.Forms.Label label9;
@@ -720,7 +717,6 @@
         private System.Windows.Forms.TextBox txt_CMND;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label lb_Nam_CC;
         private System.Windows.Forms.Label lb_MaNV_CC;
@@ -733,5 +729,7 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.DataGridView dgv_ChamCong;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Button btn_DichVu;
     }
 }

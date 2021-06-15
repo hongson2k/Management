@@ -38,10 +38,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.btnLogOut = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -56,8 +53,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_TenNhanVien = new System.Windows.Forms.TextBox();
-            this.lbVaiTro = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_DiaChi = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -69,7 +64,7 @@
             this.txt_CMND = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btn_ChamCong = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lb_Nam_CC = new System.Windows.Forms.Label();
             this.lb_MaNV_CC = new System.Windows.Forms.Label();
@@ -81,17 +76,27 @@
             this.lb_Thang_CC = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.dgv_ChamCong = new System.Windows.Forms.DataGridView();
-            this.label14 = new System.Windows.Forms.Label();
-            this.btn_ChamCong = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.btn_NhanSu = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.btn_DichVu = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.btn_HoSoDichVu = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btn_HoSoBA = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btn_BenhNhan = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btn_DonVi = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -101,7 +106,15 @@
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ChamCong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -198,57 +211,16 @@
             this.panel2.Size = new System.Drawing.Size(1226, 100);
             this.panel2.TabIndex = 16;
             // 
-            // panel1
+            // label14
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btn_NhanSu);
-            this.panel1.Controls.Add(this.pictureBox11);
-            this.panel1.Controls.Add(this.pictureBox5);
-            this.panel1.Controls.Add(this.btnLogOut);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(246, 804);
-            this.panel1.TabIndex = 15;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(0, 245);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(45, 41);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 36;
-            this.pictureBox11.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(1, 0);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(242, 187);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.FlatAppearance.BorderSize = 0;
-            this.btnLogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOut.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.btnLogOut.ForeColor = System.Drawing.Color.White;
-            this.btnLogOut.Location = new System.Drawing.Point(46, 245);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(197, 44);
-            this.btnLogOut.TabIndex = 35;
-            this.btnLogOut.Text = "Logout";
-            this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.UseVisualStyleBackColor = true;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(289, 25);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(638, 49);
+            this.label14.TabIndex = 46;
+            this.label14.Text = "Hospital Centre Management";
             // 
             // panel10
             // 
@@ -319,8 +291,6 @@
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.txt_TenNhanVien);
-            this.panel5.Controls.Add(this.lbVaiTro);
-            this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.txt_DiaChi);
             this.panel5.Controls.Add(this.label9);
@@ -405,24 +375,6 @@
             this.txt_TenNhanVien.Name = "txt_TenNhanVien";
             this.txt_TenNhanVien.Size = new System.Drawing.Size(260, 34);
             this.txt_TenNhanVien.TabIndex = 4;
-            // 
-            // lbVaiTro
-            // 
-            this.lbVaiTro.AutoSize = true;
-            this.lbVaiTro.Location = new System.Drawing.Point(165, 300);
-            this.lbVaiTro.Name = "lbVaiTro";
-            this.lbVaiTro.Size = new System.Drawing.Size(75, 27);
-            this.lbVaiTro.TabIndex = 17;
-            this.lbVaiTro.Text = "Vai trò";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 300);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(75, 27);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "Vai trò";
             // 
             // label2
             // 
@@ -519,15 +471,20 @@
             this.tabPage2.Text = "Chấm công";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // btn_ChamCong
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 32);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1130, 535);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Dịch vụ";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.btn_ChamCong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
+            this.btn_ChamCong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ChamCong.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ChamCong.ForeColor = System.Drawing.Color.White;
+            this.btn_ChamCong.Location = new System.Drawing.Point(808, 413);
+            this.btn_ChamCong.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_ChamCong.Name = "btn_ChamCong";
+            this.btn_ChamCong.Size = new System.Drawing.Size(187, 57);
+            this.btn_ChamCong.TabIndex = 43;
+            this.btn_ChamCong.Text = "Cá nhân";
+            this.btn_ChamCong.UseVisualStyleBackColor = false;
+            this.btn_ChamCong.Click += new System.EventHandler(this.btn_ChamCong_Click);
             // 
             // panel6
             // 
@@ -635,42 +592,53 @@
             this.dgv_ChamCong.TabIndex = 0;
             this.dgv_ChamCong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ChamCong_CellClick);
             // 
-            // label14
+            // tabPage3
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(289, 25);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(648, 51);
-            this.label14.TabIndex = 46;
-            this.label14.Text = "Hospital Centre Management";
+            this.tabPage3.Location = new System.Drawing.Point(4, 32);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1130, 535);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Dịch vụ";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // btn_ChamCong
+            // btnLogOut
             // 
-            this.btn_ChamCong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
-            this.btn_ChamCong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ChamCong.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ChamCong.ForeColor = System.Drawing.Color.White;
-            this.btn_ChamCong.Location = new System.Drawing.Point(808, 413);
-            this.btn_ChamCong.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_ChamCong.Name = "btn_ChamCong";
-            this.btn_ChamCong.Size = new System.Drawing.Size(187, 57);
-            this.btn_ChamCong.TabIndex = 43;
-            this.btn_ChamCong.Text = "Cá nhân";
-            this.btn_ChamCong.UseVisualStyleBackColor = false;
-            this.btn_ChamCong.Click += new System.EventHandler(this.btn_ChamCong_Click);
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLogOut.ForeColor = System.Drawing.Color.White;
+            this.btnLogOut.Location = new System.Drawing.Point(46, 516);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(197, 44);
+            this.btnLogOut.TabIndex = 35;
+            this.btnLogOut.Text = "Logout";
+            this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
-            // pictureBox1
+            // pictureBox5
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1, 193);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 41);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 44;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(1, 0);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(242, 187);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 4;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(0, 516);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(45, 41);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 36;
+            this.pictureBox11.TabStop = false;
             // 
             // btn_NhanSu
             // 
@@ -687,6 +655,178 @@
             this.btn_NhanSu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_NhanSu.UseVisualStyleBackColor = true;
             this.btn_NhanSu.Click += new System.EventHandler(this.btn_NhanSu_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1, 193);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(45, 41);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 44;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.panel1.Controls.Add(this.pictureBox7);
+            this.panel1.Controls.Add(this.btn_DichVu);
+            this.panel1.Controls.Add(this.pictureBox6);
+            this.panel1.Controls.Add(this.btn_HoSoDichVu);
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.btn_HoSoBA);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.btn_BenhNhan);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.btn_DonVi);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.btn_NhanSu);
+            this.panel1.Controls.Add(this.pictureBox11);
+            this.panel1.Controls.Add(this.pictureBox5);
+            this.panel1.Controls.Add(this.btnLogOut);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(246, 804);
+            this.panel1.TabIndex = 15;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(-1, 349);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(44, 46);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 60;
+            this.pictureBox7.TabStop = false;
+            // 
+            // btn_DichVu
+            // 
+            this.btn_DichVu.FlatAppearance.BorderSize = 0;
+            this.btn_DichVu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btn_DichVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DichVu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DichVu.ForeColor = System.Drawing.Color.White;
+            this.btn_DichVu.Location = new System.Drawing.Point(46, 349);
+            this.btn_DichVu.Name = "btn_DichVu";
+            this.btn_DichVu.Size = new System.Drawing.Size(187, 46);
+            this.btn_DichVu.TabIndex = 59;
+            this.btn_DichVu.Text = "Dịch Vụ";
+            this.btn_DichVu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_DichVu.UseVisualStyleBackColor = true;
+            this.btn_DichVu.Click += new System.EventHandler(this.btn_DichVu_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(1, 460);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(40, 46);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 52;
+            this.pictureBox6.TabStop = false;
+            // 
+            // btn_HoSoDichVu
+            // 
+            this.btn_HoSoDichVu.FlatAppearance.BorderSize = 0;
+            this.btn_HoSoDichVu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btn_HoSoDichVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_HoSoDichVu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HoSoDichVu.ForeColor = System.Drawing.Color.White;
+            this.btn_HoSoDichVu.Location = new System.Drawing.Point(46, 460);
+            this.btn_HoSoDichVu.Name = "btn_HoSoDichVu";
+            this.btn_HoSoDichVu.Size = new System.Drawing.Size(194, 46);
+            this.btn_HoSoDichVu.TabIndex = 51;
+            this.btn_HoSoDichVu.Text = "Hồ sơ dịch vụ";
+            this.btn_HoSoDichVu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_HoSoDichVu.UseVisualStyleBackColor = true;
+            this.btn_HoSoDichVu.Click += new System.EventHandler(this.btn_HoSoDichVu_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(1, 408);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(40, 46);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 50;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // btn_HoSoBA
+            // 
+            this.btn_HoSoBA.FlatAppearance.BorderSize = 0;
+            this.btn_HoSoBA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btn_HoSoBA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_HoSoBA.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HoSoBA.ForeColor = System.Drawing.Color.White;
+            this.btn_HoSoBA.Location = new System.Drawing.Point(46, 408);
+            this.btn_HoSoBA.Name = "btn_HoSoBA";
+            this.btn_HoSoBA.Size = new System.Drawing.Size(194, 46);
+            this.btn_HoSoBA.TabIndex = 49;
+            this.btn_HoSoBA.Text = "Hồ sơ bệnh án";
+            this.btn_HoSoBA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_HoSoBA.UseVisualStyleBackColor = true;
+            this.btn_HoSoBA.Click += new System.EventHandler(this.btn_HoSoBA_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(1, 297);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(40, 46);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 48;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // btn_BenhNhan
+            // 
+            this.btn_BenhNhan.FlatAppearance.BorderSize = 0;
+            this.btn_BenhNhan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btn_BenhNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_BenhNhan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_BenhNhan.ForeColor = System.Drawing.Color.White;
+            this.btn_BenhNhan.Location = new System.Drawing.Point(46, 297);
+            this.btn_BenhNhan.Name = "btn_BenhNhan";
+            this.btn_BenhNhan.Size = new System.Drawing.Size(194, 46);
+            this.btn_BenhNhan.TabIndex = 47;
+            this.btn_BenhNhan.Text = "Bệnh nhân";
+            this.btn_BenhNhan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_BenhNhan.UseVisualStyleBackColor = true;
+            this.btn_BenhNhan.Click += new System.EventHandler(this.btn_BenhNhan_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(3, 245);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 46);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 46;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btn_DonVi
+            // 
+            this.btn_DonVi.FlatAppearance.BorderSize = 0;
+            this.btn_DonVi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btn_DonVi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DonVi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DonVi.ForeColor = System.Drawing.Color.White;
+            this.btn_DonVi.Location = new System.Drawing.Point(49, 245);
+            this.btn_DonVi.Name = "btn_DonVi";
+            this.btn_DonVi.Size = new System.Drawing.Size(194, 46);
+            this.btn_DonVi.TabIndex = 45;
+            this.btn_DonVi.Text = "Đơn vị";
+            this.btn_DonVi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_DonVi.UseVisualStyleBackColor = true;
+            this.btn_DonVi.Click += new System.EventHandler(this.btn_DonVi_Click);
             // 
             // GDQuanLyCM
             // 
@@ -709,9 +849,6 @@
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             this.tabControl1.ResumeLayout(false);
@@ -723,7 +860,15 @@
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ChamCong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -739,10 +884,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.TabControl tabControl1;
@@ -757,8 +898,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_TenNhanVien;
-        private System.Windows.Forms.Label lbVaiTro;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_DiaChi;
         private System.Windows.Forms.Label label9;
@@ -784,7 +923,21 @@
         private System.Windows.Forms.DataGridView dgv_ChamCong;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btn_ChamCong;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Button btn_NhanSu;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btn_DonVi;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button btn_BenhNhan;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button btn_HoSoBA;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Button btn_HoSoDichVu;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Button btn_DichVu;
     }
 }

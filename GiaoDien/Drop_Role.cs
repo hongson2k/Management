@@ -13,7 +13,7 @@ namespace GiaoDien
 {
     public partial class Drop_Role : Form
     {
-        string connectionString = "USER ID = CARSON;Password=123;DATA SOURCE = localhost:1521/xe;";
+        string connectionString = "USER ID = ADMINBV;Password=123;DATA SOURCE = localhost:1521/xe;";
         public Drop_Role()
         {
             InitializeComponent();

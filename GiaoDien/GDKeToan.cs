@@ -47,9 +47,7 @@ namespace GiaoDien
                 lb_Luong.Text = dtbl.Rows[0][5].ToString();
                 txt_GioiTinh.Text = dtbl.Rows[0][6].ToString();
                 lb_PhuCap.Text = dtbl.Rows[0][7].ToString();
-
-                lbVaiTro.Text = dtbl.Rows[0][8].ToString();
-                lbDonVi.Text = dtbl.Rows[0][9].ToString();
+                lbDonVi.Text = dtbl.Rows[0][8].ToString();
                 lbName.Text = dtbl.Rows[0][1].ToString();
                 conn.Close();
             }

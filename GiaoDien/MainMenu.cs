@@ -41,18 +41,18 @@ namespace GiaoDien
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+
             User usera = new User();
             usera.ShowDialog();
-            this.Close();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
+
             Role rolea = new Role();
             rolea.ShowDialog();
-            this.Close();
+
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -323,6 +323,12 @@ namespace GiaoDien
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Table tbl = new Table();
+            tbl.ShowDialog();
         }
     }
 }

@@ -30,10 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GDKeToan));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_NhanSu = new System.Windows.Forms.Button();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbName = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -56,8 +59,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_TenNhanVien = new System.Windows.Forms.TextBox();
-            this.lbVaiTro = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_DiaChi = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -69,7 +70,7 @@
             this.txt_CMND = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btn_ChamCong = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lb_Nam_CC = new System.Windows.Forms.Label();
             this.lb_MaNV_CC = new System.Windows.Forms.Label();
@@ -81,11 +82,9 @@
             this.lb_Thang_CC = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.dgv_ChamCong = new System.Windows.Forms.DataGridView();
-            this.btn_ChamCong = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_NhanSu = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel2.SuspendLayout();
@@ -101,7 +100,6 @@
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ChamCong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -117,6 +115,34 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(246, 804);
             this.panel1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1, 193);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(45, 41);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 40;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btn_NhanSu
+            // 
+            this.btn_NhanSu.FlatAppearance.BorderSize = 0;
+            this.btn_NhanSu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btn_NhanSu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_NhanSu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_NhanSu.ForeColor = System.Drawing.Color.White;
+            this.btn_NhanSu.Location = new System.Drawing.Point(46, 193);
+            this.btn_NhanSu.Name = "btn_NhanSu";
+            this.btn_NhanSu.Size = new System.Drawing.Size(200, 46);
+            this.btn_NhanSu.TabIndex = 39;
+            this.btn_NhanSu.Text = "Nhân sự";
+            this.btn_NhanSu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_NhanSu.UseVisualStyleBackColor = true;
+            this.btn_NhanSu.Click += new System.EventHandler(this.btn_NhanSu_Click);
             // 
             // pictureBox11
             // 
@@ -165,6 +191,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1226, 100);
             this.panel2.TabIndex = 3;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(289, 25);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(638, 49);
+            this.label14.TabIndex = 46;
+            this.label14.Text = "Hospital Centre Management";
             // 
             // panel3
             // 
@@ -319,8 +356,6 @@
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.txt_TenNhanVien);
-            this.panel5.Controls.Add(this.lbVaiTro);
-            this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.txt_DiaChi);
             this.panel5.Controls.Add(this.label9);
@@ -405,24 +440,6 @@
             this.txt_TenNhanVien.Name = "txt_TenNhanVien";
             this.txt_TenNhanVien.Size = new System.Drawing.Size(260, 34);
             this.txt_TenNhanVien.TabIndex = 4;
-            // 
-            // lbVaiTro
-            // 
-            this.lbVaiTro.AutoSize = true;
-            this.lbVaiTro.Location = new System.Drawing.Point(165, 300);
-            this.lbVaiTro.Name = "lbVaiTro";
-            this.lbVaiTro.Size = new System.Drawing.Size(75, 27);
-            this.lbVaiTro.TabIndex = 17;
-            this.lbVaiTro.Text = "Vai trò";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 300);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(75, 27);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "Vai trò";
             // 
             // label2
             // 
@@ -519,15 +536,20 @@
             this.tabPage2.Text = "Chấm công";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // btn_ChamCong
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 32);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1130, 535);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Dịch vụ";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.btn_ChamCong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
+            this.btn_ChamCong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ChamCong.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ChamCong.ForeColor = System.Drawing.Color.White;
+            this.btn_ChamCong.Location = new System.Drawing.Point(839, 417);
+            this.btn_ChamCong.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_ChamCong.Name = "btn_ChamCong";
+            this.btn_ChamCong.Size = new System.Drawing.Size(187, 57);
+            this.btn_ChamCong.TabIndex = 37;
+            this.btn_ChamCong.Text = "Cá nhân";
+            this.btn_ChamCong.UseVisualStyleBackColor = false;
+            this.btn_ChamCong.Click += new System.EventHandler(this.btn_ChamCong_Click);
             // 
             // panel6
             // 
@@ -635,59 +657,15 @@
             this.dgv_ChamCong.TabIndex = 0;
             this.dgv_ChamCong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ChamCong_CellClick);
             // 
-            // btn_ChamCong
+            // tabPage3
             // 
-            this.btn_ChamCong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
-            this.btn_ChamCong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ChamCong.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ChamCong.ForeColor = System.Drawing.Color.White;
-            this.btn_ChamCong.Location = new System.Drawing.Point(839, 417);
-            this.btn_ChamCong.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_ChamCong.Name = "btn_ChamCong";
-            this.btn_ChamCong.Size = new System.Drawing.Size(187, 57);
-            this.btn_ChamCong.TabIndex = 37;
-            this.btn_ChamCong.Text = "Cá nhân";
-            this.btn_ChamCong.UseVisualStyleBackColor = false;
-            this.btn_ChamCong.Click += new System.EventHandler(this.btn_ChamCong_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(289, 25);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(648, 51);
-            this.label14.TabIndex = 46;
-            this.label14.Text = "Hospital Centre Management";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1, 193);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 41);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 40;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // btn_NhanSu
-            // 
-            this.btn_NhanSu.FlatAppearance.BorderSize = 0;
-            this.btn_NhanSu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btn_NhanSu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_NhanSu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_NhanSu.ForeColor = System.Drawing.Color.White;
-            this.btn_NhanSu.Location = new System.Drawing.Point(46, 193);
-            this.btn_NhanSu.Name = "btn_NhanSu";
-            this.btn_NhanSu.Size = new System.Drawing.Size(200, 46);
-            this.btn_NhanSu.TabIndex = 39;
-            this.btn_NhanSu.Text = "Nhân sự";
-            this.btn_NhanSu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_NhanSu.UseVisualStyleBackColor = true;
-            this.btn_NhanSu.Click += new System.EventHandler(this.btn_NhanSu_Click);
+            this.tabPage3.Location = new System.Drawing.Point(4, 32);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1130, 535);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Dịch vụ";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // GDKeToan
             // 
@@ -704,6 +682,7 @@
             this.Text = "GDKeToan";
             this.Load += new System.EventHandler(this.GDKeToan_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -724,7 +703,6 @@
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ChamCong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -758,8 +736,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_TenNhanVien;
-        private System.Windows.Forms.Label lbVaiTro;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_DiaChi;
         private System.Windows.Forms.Label label9;

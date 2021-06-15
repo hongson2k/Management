@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhanHe1));
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.btn_logout = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -41,6 +43,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.buttomUsers = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
             this.MenuCenter = new System.Windows.Forms.Panel();
             this.add_role_btn = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -76,8 +79,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.MenuVertical.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -108,6 +111,8 @@
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.MenuVertical.Controls.Add(this.pictureBox13);
+            this.MenuVertical.Controls.Add(this.button3);
             this.MenuVertical.Controls.Add(this.pictureBox11);
             this.MenuVertical.Controls.Add(this.btn_logout);
             this.MenuVertical.Controls.Add(this.pictureBox1);
@@ -124,11 +129,38 @@
             this.MenuVertical.TabIndex = 0;
             this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint);
             // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
+            this.pictureBox13.Location = new System.Drawing.Point(12, 337);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(45, 41);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 9;
+            this.pictureBox13.TabStop = false;
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(59, 332);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(184, 46);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Tables";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
             // pictureBox11
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(12, 337);
+            this.pictureBox11.Location = new System.Drawing.Point(12, 392);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(45, 41);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -143,9 +175,9 @@
             this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_logout.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_logout.ForeColor = System.Drawing.Color.White;
-            this.btn_logout.Location = new System.Drawing.Point(56, 332);
+            this.btn_logout.Location = new System.Drawing.Point(59, 387);
             this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Size = new System.Drawing.Size(184, 46);
+            this.btn_logout.Size = new System.Drawing.Size(178, 46);
             this.btn_logout.TabIndex = 6;
             this.btn_logout.Text = "Logout";
             this.btn_logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -268,6 +300,17 @@
             this.panel2.Size = new System.Drawing.Size(1228, 80);
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(290, 15);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(638, 49);
+            this.label12.TabIndex = 46;
+            this.label12.Text = "Hospital Centre Management";
             // 
             // MenuCenter
             // 
@@ -651,11 +694,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
-            this.label5.Location = new System.Drawing.Point(1077, 8);
+            this.label5.Location = new System.Drawing.Point(957, 8);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 34);
+            this.label5.Size = new System.Drawing.Size(146, 34);
             this.label5.TabIndex = 18;
-            this.label5.Text = "DBA";
+            this.label5.Text = "ADMINBV";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label3
@@ -663,7 +706,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
-            this.label3.Location = new System.Drawing.Point(918, 8);
+            this.label3.Location = new System.Drawing.Point(779, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(153, 34);
             this.label3.TabIndex = 17;
@@ -701,17 +744,6 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(290, 15);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(648, 51);
-            this.label12.TabIndex = 46;
-            this.label12.Text = "Hospital Centre Management";
-            // 
             // PhanHe1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -724,6 +756,7 @@
             this.Text = "Hospital Centre";
             this.Load += new System.EventHandler(this.PhanHe1_Load);
             this.MenuVertical.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -813,5 +846,7 @@
         private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.Button add_role_btn;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.Button button3;
     }
 }

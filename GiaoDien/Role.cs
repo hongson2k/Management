@@ -13,7 +13,7 @@ namespace GiaoDien
 {
     public partial class Role : Form
     {
-        string connectionString = "USER ID = CARSON;Password=123;DATA SOURCE = localhost:1521/xe;";
+        string connectionString = "USER ID = ADMINBV;Password=123;DATA SOURCE = localhost:1521/xe;";
         public Role()
         {
             InitializeComponent();
@@ -101,23 +101,38 @@ namespace GiaoDien
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+
             View_Detail_Role vdr = new View_Detail_Role();
             vdr.Message = txtRolename.Text;
             vdr.ShowDialog();
-            this.Close();
+
             
         }
 
         private void dgv_in_Role_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            string v = dgv_in_Role.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtRolename.Text = v;
+            
         }
 
         private void Role_Load(object sender, EventArgs e)
         {
             displayData();
+        }
+
+        private void txtRolename_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_username_add_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgv_in_Role_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string v = dgv_in_Role.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtRolename.Text = v;
         }
     }
 }

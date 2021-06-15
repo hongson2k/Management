@@ -13,12 +13,13 @@ namespace GiaoDien
 {
     public partial class User : Form
     {
-        string connectionString = "USER ID = CARSON;Password=123;DATA SOURCE = localhost:1521/xe;";
+        string connectionString = "USER ID = ADMINBV;Password=123;DATA SOURCE = localhost:1521/xe;";
         public User()
         {
             InitializeComponent();
             
         }
+
         public void Alert_DropUser(string msg, Form_Alert.enmType type)
         {
             Form_Alert frm = new Form_Alert();
@@ -117,11 +118,11 @@ namespace GiaoDien
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+
             View_Detail vdt = new View_Detail();
             vdt.Message = txtUsname.Text;
             vdt.ShowDialog();
-            this.Close();
+
 
 
         }
@@ -133,8 +134,7 @@ namespace GiaoDien
 
         private void dgv1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            string v = dgv_UserList.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtUsname.Text = v;
+
         }
 
         private void btn_Refresh_Click(object sender, EventArgs e)
@@ -145,6 +145,12 @@ namespace GiaoDien
         private void User_Load(object sender, EventArgs e)
         {
             displayData();
+        }
+
+        private void dgv_UserList_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string v = dgv_UserList.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtUsname.Text = v;
         }
     }
 }

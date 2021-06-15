@@ -47,7 +47,7 @@ namespace GiaoDien
         private void loadform()
         {
 
-            using (OracleConnection orcCont = new OracleConnection("USER ID = CARSON;Password=123;DATA SOURCE = localhost:1521/xe;"))
+            using (OracleConnection orcCont = new OracleConnection("USER ID = ADMINBV;Password=123;DATA SOURCE = localhost:1521/xe;"))
             {
                 orcCont.Open();
                 OracleDataAdapter orcData = new OracleDataAdapter("SELECT DISTINCT ROLE FROM DBA_ROLES ORDER BY ROLE ASC ", orcCont);
@@ -87,7 +87,7 @@ namespace GiaoDien
                 dgvSysPri.Columns.Add(chkadmin2);
 
                 // TAB OBJECT PRIVILEGE
-                OracleDataAdapter orcData3 = new OracleDataAdapter("SELECT table_name FROM all_tables where owner='CARSON'", orcCont); // hiện các bảng
+                OracleDataAdapter orcData3 = new OracleDataAdapter("SELECT table_name FROM all_tables where owner='ADMINBV'", orcCont); // hiện các bảng
                 DataTable dtbl3 = new DataTable();
                 orcData3.Fill(dtbl3);
                 dgvTable.DataSource = dtbl3;
@@ -284,7 +284,7 @@ namespace GiaoDien
         private void buttonApply_Click(object sender, EventArgs e)
         {
             string sql;
-            OracleConnection con = new OracleConnection("USER ID = CARSON;Password=123;DATA SOURCE = localhost:1521/xe;");//Kết nối chuỗi dữ liệu
+            OracleConnection con = new OracleConnection("USER ID = ADMINBV;Password=123;DATA SOURCE = localhost:1521/xe;");//Kết nối chuỗi dữ liệu
             con.Open();//Mở chuỗi kết nối
             OracleCommand command = new OracleCommand();
             command.Connection = con;
@@ -431,7 +431,7 @@ namespace GiaoDien
                 //Không cho phép sửa  table
                 txtTable.Enabled = false;
                 //load dgvCol
-                using (OracleConnection orcCont1 = new OracleConnection("USER ID = CARSON;Password=123;DATA SOURCE = localhost:1521/xe;"))
+                using (OracleConnection orcCont1 = new OracleConnection("USER ID = ADMINBV;Password=123;DATA SOURCE = localhost:1521/xe;"))
                 {
 
                     //load dgvCol - hiện các column để chọn Grant Update

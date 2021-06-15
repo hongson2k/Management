@@ -50,9 +50,7 @@ namespace GiaoDien.NhanSu
                 txt_Luong.Text = dtbl.Rows[0][5].ToString();
                 txt_GioiTinh.Text = dtbl.Rows[0][6].ToString();
                 txt_PhuCap.Text = dtbl.Rows[0][7].ToString();
-
-                txt_VaiTro.Text = dtbl.Rows[0][8].ToString();
-                txt_DonVi.Text = dtbl.Rows[0][9].ToString();
+                txt_DonVi.Text = dtbl.Rows[0][8].ToString();
                 
                 conn.Close();
             }
@@ -74,8 +72,7 @@ namespace GiaoDien.NhanSu
             txt_Luong.Text = dgv_NhanSu.Rows[i].Cells[5].Value.ToString();
             txt_GioiTinh.Text = dgv_NhanSu.Rows[i].Cells[6].Value.ToString();
             txt_PhuCap.Text = dgv_NhanSu.Rows[i].Cells[7].Value.ToString();
-            txt_VaiTro.Text = dgv_NhanSu.Rows[i].Cells[8].Value.ToString();
-            txt_DonVi.Text = dgv_NhanSu.Rows[i].Cells[9].Value.ToString();
+            txt_DonVi.Text = dgv_NhanSu.Rows[i].Cells[8].Value.ToString();
         }
 
         private void btn_Add_Click(object sender, EventArgs e)
@@ -87,7 +84,7 @@ namespace GiaoDien.NhanSu
                 try
                 {
                     conn.Open();
-                    string sql = "Insert into ADMINBV.NHANVIEN( MaNhanVien , HoTen , DiaChi , NgaySinh , CMND , Luong , GioiTinh, PhuCap, VaiTro, DonVi) "
+                    string sql = "Insert into ADMINBV.NHANVIEN( MaNhanVien , HoTen , DiaChi , NgaySinh , CMND , Luong , GioiTinh, PhuCap, DonVi) "
                                                          + " values( '" + txt_manv.Text + "' , '"
                                                          + txt_TenNhanVien.Text + "' , '"
                                                          + txt_DiaChi.Text
@@ -96,7 +93,6 @@ namespace GiaoDien.NhanSu
                                                          + int.Parse(txt_Luong.Text) + " , '"
                                                          + txt_GioiTinh.Text + "' , "
                                                          + int.Parse(txt_PhuCap.Text) + ", '"
-                                                         + txt_VaiTro.Text + "' , '"
                                                          + txt_DonVi.Text + "')";
 
 
@@ -140,8 +136,7 @@ namespace GiaoDien.NhanSu
                         + txt_DiaChi.Text + "' , CMND = '" 
                         + txt_CMND.Text + "' , NgaySinh = to_date('" + txt_NgaySinh.Text + "', 'DD-MM-YYYY')  , Luong = '" 
                         + txt_Luong.Text + "' , PhuCap = '" 
-                        + txt_PhuCap.Text + "' , VaiTro = '"
-                        + txt_VaiTro.Text + "' , DonVi = '"
+                        + txt_PhuCap.Text + "' , DonVi = '"
                         + txt_DonVi.Text + "', GioiTinh = '"
                         + txt_GioiTinh.Text
                         + "'  where MaNhanVien = '" + txt_manv.Text + "' ";
@@ -189,6 +184,11 @@ namespace GiaoDien.NhanSu
                     conn.Close();
                 }
             }
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 
